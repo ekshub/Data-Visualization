@@ -1,0 +1,536 @@
+/*全局样式*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* 背景色 */
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #ffffff; /* 内容背景色 */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #4a5d66; /* 设置上边框颜色 */
+}
+
+h1 {
+    text-align: center;
+    /* 标题居中 */
+    color: #ffffff; 
+    /* 设置标题颜色为白色（用于背景色） */
+    background: linear-gradient(90deg, #d41c5a, #FF6F61); 
+    /* 更鲜艳的渐变色背景，从粉色到黄色 */
+    -webkit-background-clip: text;
+    /* 文字背景裁剪 */
+    -webkit-text-fill-color: transparent;
+    /* 文字填充透明 */
+    font-size: 48px;
+    /* 设置字体大小 */
+    background-color: #35424a; 
+    /* 确保背景颜色与页面一致 */
+}
+
+h2 {
+    width: 100%; /* 标题占满一行 */
+    margin-bottom: 15px;
+    color: #35424a; /* 使用深蓝灰色 */
+    text-align: center;
+}
+/*全局样式end*/
+
+
+/* 动画样式start */
+@-webkit-keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+/* 应用动画 */
+.animated-text {
+    animation: focus-in-expand 1s ease forwards;
+    /* 动画持续时间为1秒，使用ease的动画曲线 */
+    animation-delay: 0s;
+    /* 动画延迟为0秒 */
+}
+/* 动画样式 end*/
+
+
+/*导航栏样式start*/
+header {
+    background: #35424a; /* 深蓝灰色 */
+    color: #ffffff; /* 文字颜色 */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff; /* 链接颜色 */
+    text-decoration: none;
+}
+/*导航栏样式end*/
+
+
+/*头部横幅样式start*/
+.hero { 
+    background: #4a5d66; /* 使用稍微明亮的蓝绿色 */
+    color: #ffffff; /* 文字颜色 */
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 300px; /* 修改为最小高度，适应内容 */
+}
+
+.center-text {
+    text-align: center;
+    margin-top: 20px; /* 控制与标题的间距，增加间隔以显得优雅 */
+    line-height: 1.8; /* 增加行距以提升可读性 */
+    font-size: 1.1rem; /* 设置字体大小以增强可读性 */
+    max-width: 600px; /* 限制段落宽度，避免过长行影响阅读 */
+    margin-left: auto; /* 居中对齐 */
+    margin-right: auto; /* 居中对齐 */
+    animation: focus-in-expand 1s ease forwards;
+    /* 动画持续时间为1秒，使用ease的动画曲线 */
+    animation-delay: 0s;
+}
+/*头部横幅样式end*/
+
+.related-information {
+    position: relative;
+    margin: 20px 0;
+    text-align: center;
+    height: 500px;
+    background: linear-gradient(135deg,  #FF6F61,rgb(233, 200, 200)); /* 渐变背景 */
+    color: white; /* 确保文字颜色与背景对比 */
+}
+
+
+/*轮播图样式start*/
+.shell {
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    margin: 0 auto; /* 居中 */
+    color: white;
+    perspective: 1000px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: translateZ(-30vw) rotateY(0);
+    animation: carousel 9s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.item {
+    position: absolute;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    background-size: cover;
+    -webkit-box-reflect: below 25px -webkit-linear-gradient(transparent 50%, rgba(255, 255, 255, 0.3));
+}
+
+.item:nth-child(1) {
+    background-image: url(./Picture/01.jpg);
+    transform: rotateY(0) translateZ(35vw);
+}
+
+.item:nth-child(2) {
+    background-image: url(./Picture/02.png);
+    transform: rotateY(120deg) translateZ(35vw);
+}
+
+.item:nth-child(3) {
+    background-image: url(./Picture/03.png);
+    transform: rotateY(240deg) translateZ(35vw);
+}
+
+@keyframes carousel {
+    0%, 17.5% {
+        transform: translateZ(-35vw) rotateY(0);
+    }
+    27.5%, 45% {
+        transform: translateZ(-35vw) rotateY(-120deg);
+    }
+    55%, 72.5% {
+        transform: translateZ(-35vw) rotateY(-240deg);
+    }
+    82.5%, 100% {
+        transform: translateZ(-35vw) rotateY(-360deg);
+    }
+}
+/*轮播图样式end*/
+
+
+/*流程图样式start*/
+.flowchart {
+    display: flex;
+    flex-direction: column; /* 标题和内容垂直排列 */
+    align-items: center;
+    max-width: 100%; /* 流程图占据整个容器 */
+    text-align: center;
+}
+
+.flowchart h2 {
+    margin-bottom: 20px; /* 给标题和流程图之间留出空间 */
+    font-size: 24px; /* 调整标题大小 */
+    font-weight: bold;
+}
+
+.flowchart-content {
+    display: flex;
+    flex-wrap: wrap; /* 允许内容换行 */
+    justify-content: center; /* 居中对齐流程图 */
+    max-width: 900px; /* 设置最大宽度 */
+    margin: 10px 0; /* 行间距 */
+}
+
+.step {
+    background-color: #ffffff;
+    border: 2px solid #4a5d66;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px; /* 统一每个步骤的宽度 */
+    height: 120px; /* 增大每个步骤的高度 */
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex; /* 使内容居中 */
+    flex-direction: column; /* 垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+}
+
+.step:hover {
+    transform: scale(1.05); /* 悬停时放大 */
+    background-color: #f0f8ff; /* 悬停时改变背景色 */
+}
+
+.step.active {
+    background-color: #d1e7ff; /* 点击后改变背景色 */
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.arrow {
+    font-size: 24px;
+    margin: 0 10px;
+    align-self: center; /* 使箭头居中 */
+    transition: transform 0.3s;
+}
+
+.arrow:hover {
+    transform: translateX(10px); /* 悬停时箭头右移 */
+}
+
+.step {
+    position: relative; /* 为伪元素定位 */
+    border: 2px solid transparent; /* 默认透明边框 */
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+.step {
+    background-color: #ffffff;
+    border: 2px solid #4a5d66;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px; /* 统一每个步骤的宽度 */
+    height: 120px; /* 增大每个步骤的高度 */
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex; /* 使内容居中 */
+    flex-direction: column; /* 垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+}
+.step::before {
+    content: '';
+    position: absolute;
+    top: 4px; /* 调整位置，增加内边距 */
+    left: 4px; /* 调整位置，增加内边距 */
+    width: calc(100% + 8px); /* 增加宽度以填满 */
+    height: calc(100% + 8px); /* 增加高度以填满 */
+    border: 4px solid transparent; /* 透明边框 */
+    box-sizing: border-box; /* 确保包括边框在内 */
+    border-top-color: rgba(255, 111, 97, 0.7); /* 边框上部分颜色 */
+    border-right-color: rgba(255, 111, 97, 0.7); /* 边框右部分颜色 */
+    border-bottom-color: rgba(255, 111, 97, 0.7); /* 边框下部分颜色 */
+    border-left-color: rgba(255, 111, 97, 0.7); /* 边框左部分颜色 */
+    animation: shine 2s linear infinite; /* 动画 */
+    transform: translate(-100%, -100%); /* 初始位置在左上角外 */
+}
+
+
+
+@keyframes shine {
+    0% {
+        transform: translate(-100%, -100%); /* 从左上角开始 */
+    }
+    25% {
+        transform: translate(100%, -100%); /* 到达右上角 */
+    }
+    50% {
+        transform: translate(100%, 100%); /* 到达右下角 */
+    }
+    75% {
+        transform: translate(-100%, 100%); /* 到达左下角 */
+    }
+    100% {
+        transform: translate(-100%, -100%); /* 回到起点 */
+    }
+}
+/*流程图样式end*/
+
+
+/*表格样式start*/
+.neural-network-applications {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 占满全宽 */
+    max-width: 100%; /* 最大宽度为100% */
+    margin: 0 auto; /* 居中对齐 */
+}
+
+.application-table {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px; /* 增加内边距 */
+    text-align: center;
+}
+
+th {
+    background-color: #35424a;
+    color: white;
+}
+
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+/*表格样式end*/
+
+
+/*常见模型样式start*/
+.application-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 calc(45% - 20px);
+    background-color: #ffffff; /* 卡片背景 */
+    border: 2px solid  #FF6F61; /* 边框颜色 */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* 悬停效果 */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #35424a; /* 卡片标题颜色 */
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/*常见模型样式end*/
+
+
+/*visualize-model style start*/
+.visualize-model {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%; /* 使每个输入组占据整行 */
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, 
+input[type="file"], 
+button {
+    width: 100%; /* 使输入框和按钮占据整行 */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* 包含padding和border在内 */
+}
+
+button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d41d6c; /* 悬停效果 */
+}
+.learning-resources {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    
+    text-align: center;
+}
+
+.resource-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resource-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s;
+}
+
+.resource-item:hover {
+    transform: scale(1.1); /* 悬停效果 */
+}
+
+.resource-item span {
+    margin-top: 5px;
+    font-weight: bold;
+}
+/*visualize-model style end*/
+
+
+/*页脚样式start*/
+.footer {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 10px;
+    color: #35424a; /* 页脚文字颜色 */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a; /* 页脚背景色 */
+    color: #ffffff; /* 页脚文字颜色 */
+}
+/*页脚样式end*/

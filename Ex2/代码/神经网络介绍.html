@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索神经网络</title>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="logo">NN Explorer</div>
+        <nav>
+            <ul>
+                <li><a href="">注册/登录</a></li>
+                <li><a href="#flowchart">流程</a></li>
+                <li><a href="#common-model">模型</a></li>
+                <li><a href="#resources">学习资源</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- 头部横幅 -->
+    <section class="hero" >
+        <h1 class="animated-text">探索神经网络的世界</h1>
+        <p class="center-text" >
+            神经网络是由输入层、隐藏层和输出层组成的计算模型，<br>
+            旨在识别模式和学习数据中的特征。<br>
+            
+        </p>
+        
+    </section>
+
+    <section class="related-information">
+        <h2>相关信息</h2>
+        <div class="shell">
+            <div class="content">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id=>
+        <h2>基础知识</h2>
+        <div class="work-principles">
+            
+            <p>神经网络是一种受人脑神经元启发的计算模型，广泛应用于机器学习和人工智能领域。它由多个相互连接的神经元构成，能够通过前向传播和反向传播过程学习和处理复杂数据。在前向传播中，输入数据层层传递，最终生成输出，而反向传播则通过调整权重来减少预测误差。激活函数在这一过程中发挥着关键作用，常用的激活函数包括Sigmoid、ReLU和Tanh等。通过实际应用示例，如电子邮件垃圾邮件的识别，神经网络展现了其自动学习和持续改进的强大能力。
+               </p> 
+            
+        </div>
+     </section>   
+     <section class="flowchart">
+        <h2>工作流程</h2> 
+        <div class="flowchart-content">
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>1. 数据准备</h3>
+                <div class="details" style="display: none;">
+                    <p>收集数据并进行清理和标准化处理。</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="none" d="M4 12h16m0 0l-5-5m5 5l-5 5" stroke="#FF6F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>2. 构建模型</h3>
+                <div class="details" style="display: none;">
+                    <p>选择模型结构并初始化参数。</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="none" d="M4 12h16m0 0l-5-5m5 5l-5 5" stroke="#FF6F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>3. 前向传播</h3>
+                <div class="details" style="display: none;">
+                    <p>输入数据，逐层计算输出。</p>
+                </div>
+            </div>
+        </div>
+        <div class="flowchart-content">
+            <div class="arrow">
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="none" d="M4 12h16m0 0l-5-5m5 5l-5 5" stroke="#FF6F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>4. 计算损失</h3>
+                <div class="details" style="display: none;">
+                    <p>计算预测结果与实际值的误差。</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="none" d="M4 12h16m0 0l-5-5m5 5l-5 5" stroke="#FF6F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>5. 反向传播</h3>
+                <div class="details" style="display: none;">
+                    <p>根据误差调整模型权重。</p>
+                </div>
+            </div>
+        </div>
+        <div class="flowchart-content">
+            <div class="arrow">
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="none" d="M4 12h16m0 0l-5-5m5 5l-5 5" stroke="#FF6F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>6. 迭代训练</h3>
+                <div class="details" style="display: none;">
+                    <p>重复训练，直到模型收敛。</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="none" d="M4 12h16m0 0l-5-5m5 5l-5 5" stroke="#FF6F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>7. 模型评估</h3>
+                <div class="details" style="display: none;">
+                    <p>使用验证集评估模型性能。</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                    <path fill="none" d="M4 12h16m0 0l-5-5m5 5l-5 5" stroke="#FF6F61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="step" onclick="toggleDetails(this)">
+                <h3>8. 部署与应用</h3>
+                <div class="details" style="display: none;">
+                    <p>将模型应用于实际场景。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleDetails(element) {
+            const details = element.querySelector('.details');
+            details.style.display = details.style.display === "none" ? "block" : "none"; // 切换显示
+        }
+    </script>
+    
+    
+    
+           
+  <!-- 应用 -->
+  <section class="neural-network-applications">
+    <h2>神经网络的应用</h2>
+
+    <!-- 应用比较表 -->
+    <div class="application-table">
+        <h3>应用比较</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>网络类型</th>
+                    <th>适用场景</th>
+                    <th>优点</th>
+                    <th>缺点</th>
+                    <th>应用示例</th>
+                    <th>开发语言</th>
+                    <th>常用框架</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CNN</td>
+                    <td>图像处理</td>
+                    <td>优秀的特征提取能力</td>
+                    <td>需要大量训练数据</td>
+                    <td>人脸识别，医疗影像分析</td>
+                    <td>Python, C++</td>
+                    <td>TensorFlow, PyTorch</td>
+                </tr>
+                <tr>
+                    <td>RNN</td>
+                    <td>序列数据处理</td>
+                    <td>适合时间序列预测</td>
+                    <td>可能出现梯度消失</td>
+                    <td>语言建模，语音识别</td>
+                    <td>Python</td>
+                    <td>Keras, TensorFlow</td>
+                </tr>
+                <tr>
+                    <td>GAN</td>
+                    <td>生成图像</td>
+                    <td>生成高质量的样本</td>
+                    <td>训练过程不稳定</td>
+                    <td>图像生成，风格迁移</td>
+                    <td>Python</td>
+                    <td>PyTorch, TensorFlow</td>
+                </tr>
+                <tr>
+                    <td>Transformer</td>
+                    <td>自然语言处理</td>
+                    <td>处理长距离依赖关系</td>
+                    <td>计算资源消耗大</td>
+                    <td>机器翻译，文本生成</td>
+                    <td>Python</td>
+                    <td>Hugging Face, TensorFlow</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="application-examples">
+        <h3>具体应用</h3>
+        <ul>
+            <li>
+                <strong>图像识别</strong>：应用于医疗影像中，帮助医生检测肺炎、肿瘤等疾病。
+            </li>
+            <li>
+                <strong>自然语言处理</strong>：用于聊天机器人，支持自动回复和客户服务；也用于语音识别系统，如语音助手。
+            </li>
+            <li>
+                <strong>自动驾驶</strong>：在自动驾驶车辆中识别交通标志、行人和障碍物，以确保安全行驶。
+            </li>
+            <li>
+                <strong>金融预测</strong>：通过分析历史数据，预测股票价格变化及风险评估，帮助投资决策。
+            </li>
+            <li>
+                <strong>推荐系统</strong>：在电商和流媒体平台上，根据用户行为提供个性化商品或内容推荐。
+            </li>
+            <li>
+                <strong>生成艺术</strong>：使用GAN生成艺术作品，为设计师和艺术家提供灵感来源。
+            </li>
+            <li>
+                <strong>游戏AI</strong>：在游戏开发中，通过深度学习提高NPC的智能表现，使游戏体验更具挑战性。
+            </li>
+            <li>
+                <strong>语音合成</strong>：在助听器或智能音箱中，将文本转换为自然流畅的语音，改善用户体验。
+            </li>
+        </ul>
+    </div>
+</section>      
+    
+<section class="common_model">   
+    <div class="container">
+        <h2>常见模型</h2> 
+        <div class="card">
+            <div class="icon">🔄</div>
+            <h3>CNN</h3>
+            <p>最常用的深度学习模型之一，主要用于处理图像数据。它的特点是利用卷积层对图像进行逐层特征提取，进而完成分类、识别等任务。</p >
+            <a class="footer" href=https://baike.baidu.com/item/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/17541100> >>> More</a >
+        </div>
+        <div class="card">
+            <div class="icon">⬇️</div>
+            <h3>RNN</h3>
+            <p>一种用于处理序列数据的深度学习模型。它的特点是可以记忆过去的输入信息，并将这些信息用于未来的预测。</p >
+            <a class="footer" href=https://baike.baidu.com/item/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/23199490> >>> More</a >
+        </div>
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>LSTM</h3>
+            <p>RNN的一种改进型，它通过引入记忆单元来解决RNN在处理长序列时存在的梯度消失问题。</p >
+            <a class="footer" href=https://zhuanlan.zhihu.com/p/518848475> >>> More</a >
+        </div>
+        <div class="card">
+            <div class="icon">💼</div>
+            <h3>Transformer</h3>
+            <p>一种基于自注意力机制的深度学习模型，具有强大的表示能力和并行计算能力，广泛应用于自然语言处理领域。</p >
+            <a class="footer" href=https://zhuanlan.zhihu.com/p/681532180> >>> More</a >
+        </div>
+    </div>
+</section>     
+
+<section class="visualize-model">
+    <h2>可视化你的模型</h2>
+    <div class="container">
+        <div class="input-group">
+            <label for="style-select">选择你使用的语言:</label>
+            <select id="style-select">
+                <option value="classic">python</option>
+                <option value="modern">c++</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="framework-select">选择你使用的框架:</label>
+            <select id="framework-select">
+                <option value="tensorflow">TensorFlow</option>
+                <option value="pytorch">PyTorch</option>
+                <option value="keras">Keras</option>
+                <option value="scikit-learn">Scikit-learn</option>
+                <option value="MindSpore">MindSpore</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="style-select">选择你想要的风格:</label>
+            <select id="style-select">
+                <option value="classic">经典风格</option>
+                <option value="modern">现代风格</option>
+                <option value="minimalist">极简风格</option>
+                <option value="colorful">多彩风格</option>
+            </select>
+        </div>
+
+        
+        <div class="input-group">
+            <label for="file-upload">上传模型文件:</label>
+            <input type="file" id="file-upload">
+        </div>
+        
+        <button id="start-button">开始</button>
+    </div>
+</section>
+    <!-- 学习资源 -->
+    <section class="learning-resources">
+        <h2>更多学习资源</h2>
+        <div class="resource-icons">
+            <a href="https://arxiv.org" target="_blank" class="resource-item" style="background-color: #ff0000;">
+                <img src=".//Picture//arxiv.svg" alt="edX" width="50" height="50">          
+            </a>
+    
+            <a href="https://www.edx.org" target="_blank" class="resource-item">
+                <img src=".//Picture//edx-logo-elm.svg" alt="edX" width="50" height="50">             
+            </a>
+    
+            <a href="https://github.com" target="_blank" class="resource-item">
+                <img src=".//Picture//github.svg" alt="edX" width="50" height="50">               
+            </a>    
+            <a href="https://www.udacity.com" target="_blank" class="resource-item">
+                <img src=".//Picture//udacity.svg" alt="edX" width="50" height="50">
+                
+            </a>
+        </div>
+    </section>
+    
+
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="contact-info">
+            <p>联系我们：2311605@mail.nankai.edu.cn</p>
+        </div>
+        <div class="social-media">
+            <p>关注我们：Facebook | Twitter | LinkedIn</p>
+        </div>
+        <p>&copy; 2024 NN Explorer 保留所有权利。</p>
+    </footer>
+</body>
+</html>
+
