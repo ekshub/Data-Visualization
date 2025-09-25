@@ -1,0 +1,366 @@
+/* page4.css */
+
+/* 通用样式 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  height: 100%; /* 确保 .content 填满剩余空间 */
+}
+
+.main {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 设置高度为100% */
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.left-sidebar,
+.main,
+.right-sidebar {
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-sidebar {
+  width: 20%;
+}
+
+.right-sidebar {
+  width: 30%;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.legend-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 修改左侧图例的宽度为50px，右侧保持原样 */
+.legend-container.left-legend {
+  width: 50px; /* 增加宽度到50px */
+  background-color: #f9f9f9;
+  padding: 5px; /* 减少内边距以适应宽度 */
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden; /* 隐藏超出部分 */
+}
+
+.legend-container.right-legend {
+  width: 50px; /* 保持右侧图例宽度为50px */
+  background-color: #f9f9f9;
+  padding: 5px; /* 减少内边距以适应宽度 */
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden; /* 隐藏超出部分 */
+}
+
+/* 可选：调整图例项的布局适应小宽度 */
+.legend-container.left-legend,
+.legend-container.right-legend {
+  flex-direction: column;
+  align-items: flex-start; /* 修改为左对齐 */
+}
+
+.legend-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background-color: gray;
+}
+
+.axis-label {
+  font-size: 14px;
+  fill: #555;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.9);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.mode-toggle {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.mode-checkbox {
+  margin-right: 5px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 左上容器样式 */
+#yearly-totals-chart-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* 高度减半 */
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* 折线样式 */
+.yt-line {
+  fill: none;
+  stroke: #1f77b4;
+  stroke-width: 2;
+}
+
+/* 交互竖线样式 */
+.brush-line {
+  cursor: ew-resize;
+  stroke: steelblue;
+  stroke-width: 2; /* 保持线条粗细 */
+  stroke-opacity: 0.7; /* 适当透明度 */
+}
+
+/* 增大竖线被选中范围的透明区域 */
+.drag-area {
+  cursor: ew-resize;
+  width: 5px; /* 设置拖动区域宽度为5px */
+  fill: transparent;
+}
+
+/* 仅保留X轴标签样式 */
+.x-axis .domain {
+  display: none;
+}
+
+.x-axis .tick line {
+  stroke: #ccc;
+  stroke-dasharray: 4; /* 设置虚线 */
+}
+
+.x-axis .tick text {
+  font-size: 12px;
+  fill: #555;
+}
+
+/* 遮罩层样式 */
+#clip rect {
+  fill: white;
+  opacity: 0;
+}
+
+/* 右上容器样式 */
+#category-chart-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* 其他容器的样式 */
+
+#word-cloud-container {
+  position: relative;
+  width: 100%;
+  height: 380px; /* 调整高度，减小为 380px */
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 0; /* 去掉内边距 */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 容器标题样式 */
+#word-cloud-title {
+  position: relative; /* 设置相对定位 */
+  top: 15px; /* 向下移动15px */
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0; /* 确保 margin 不干扰 */
+}
+
+/* 词云区域样式 */
+#word-cloud {
+  flex: 1; /* 占满剩余空间 */
+  margin-top: 5px; /* 与左右上下间距均为5px */
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+/* “more>>>”的样式 */
+.more-link {
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  font-size: 10px;
+  margin: 5px 10px 0 0; /* 上边距5px，右边距10px，左边距0 */
+}
+
+/* Main Container Styles */
+/* 新增样式以控制按钮和图例的位置 */
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 居中对齐按钮 */
+  position: relative;
+  width: 97%;
+  height: 100%; /* 调小高度至50% */
+}
+
+.chart-toggle {
+  order: 1;
+  margin-bottom: 0px; /* 按钮与图表之间的间距 */
+  width: 100%;
+  text-align: center;
+}
+
+.chart-toggle button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chart-toggle button:hover {
+  background-color: #f0f0f0;
+}
+
+/* 主内容区域样式 */
+.main-content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex: 1;
+}
+
+#ball-animation-container {
+  flex: 0 0 480px; /* 固定宽度为550px，调整此值以缩小宽度 */
+  height: 96%; /* 根据需要调整高度 */
+  
+  border: 1px solid #ccc;
+  position: relative;
+  background-color: #f9f9f9;
+  margin: 0 10px; /* 左右间距 */
+  border-radius: 8px;
+}
+
+/* 连线样式 */
+.link {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+/* 节点样式 */
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* 节点标签 */
+.label {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* Ensure SVG overflows are visible for smoother animation */
+#ball-animation-container svg {
+  overflow: visible;
+}
+
+/* Ball Animation Styling */
+#ball-animation-container circle {
+  filter: url(#blur);
+}
+
+/* Optional: Define a blur filter for the trailing effect */
+#ball-animation-container svg defs {
+  filter: blur(5px);
+}
+
+/* 响应式设计（可选） */
+@media (max-width: 768px) {
+  .main-content-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .legend-container.left-legend,
+  .legend-container.right-legend {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 0;
+    align-items: flex-start; /* 左对齐 */
+  }
+
+  #ball-animation-container {
+    width: 100%;
+    height: 400px; /* 调整为适合移动设备的高度 */
+    margin: 0;
+  }
+
+  .chart-toggle {
+    flex-direction: column;
+  }
+
+  .chart-toggle button {
+    margin: 5px 0;
+  }
+}
