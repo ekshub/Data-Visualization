@@ -1,0 +1,1157 @@
+[
+  {
+    "source": "cs.AI",
+    "target": "cs.LG",
+    "value": 2522
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.CC",
+    "value": 444
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.LO",
+    "value": 1400
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.MA",
+    "value": 2144
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.CL",
+    "value": 742
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.IR",
+    "value": 411
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.PL",
+    "value": 389
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.CG",
+    "value": 49
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.GR",
+    "value": 103
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.RO",
+    "value": 851
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.DB",
+    "value": 664
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.IT",
+    "value": 209
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.NE",
+    "value": 1336
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.DS",
+    "value": 299
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.DL",
+    "value": 163
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.SE",
+    "value": 339
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.CE",
+    "value": 311
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.MS",
+    "value": 112
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.SC",
+    "value": 265
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.DC",
+    "value": 213
+  },
+  {
+    "source": "cs.AI",
+    "target": "cs.CV",
+    "value": 556
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.CC",
+    "value": 142
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.LO",
+    "value": 119
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.MA",
+    "value": 1518
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.CL",
+    "value": 570
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.IR",
+    "value": 284
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.PL",
+    "value": 128
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.CG",
+    "value": 80
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.GR",
+    "value": 269
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.RO",
+    "value": 471
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.DB",
+    "value": 422
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.IT",
+    "value": 220
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.NE",
+    "value": 1473
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.DS",
+    "value": 176
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.DL",
+    "value": 50
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.SE",
+    "value": 107
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.CE",
+    "value": 457
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.MS",
+    "value": 241
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.SC",
+    "value": 209
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.DC",
+    "value": 250
+  },
+  {
+    "source": "cs.LG",
+    "target": "cs.CV",
+    "value": 834
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.LO",
+    "value": 786
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.MA",
+    "value": 162
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.CL",
+    "value": 26
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.IR",
+    "value": 18
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.PL",
+    "value": 71
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.CG",
+    "value": 191
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.GR",
+    "value": 4
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.RO",
+    "value": 26
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.DB",
+    "value": 114
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.IT",
+    "value": 210
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.NE",
+    "value": 51
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.DS",
+    "value": 1045
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.DL",
+    "value": 5
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.SE",
+    "value": 9
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.CE",
+    "value": 51
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.MS",
+    "value": 17
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.SC",
+    "value": 189
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.DC",
+    "value": 158
+  },
+  {
+    "source": "cs.CC",
+    "target": "cs.CV",
+    "value": 15
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.MA",
+    "value": 255
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.CL",
+    "value": 75
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.IR",
+    "value": 2
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.PL",
+    "value": 1754
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.CG",
+    "value": 29
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.GR",
+    "value": 6
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.RO",
+    "value": 39
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.DB",
+    "value": 369
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.IT",
+    "value": 32
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.NE",
+    "value": 25
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.DS",
+    "value": 157
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.DL",
+    "value": 30
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.SE",
+    "value": 743
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.CE",
+    "value": 121
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.MS",
+    "value": 127
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.SC",
+    "value": 344
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.DC",
+    "value": 283
+  },
+  {
+    "source": "cs.LO",
+    "target": "cs.CV",
+    "value": 4
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.CL",
+    "value": 99
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.IR",
+    "value": 38
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.PL",
+    "value": 36
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.CG",
+    "value": 34
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.GR",
+    "value": 9
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.RO",
+    "value": 1002
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.DB",
+    "value": 20
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.IT",
+    "value": 96
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.NE",
+    "value": 204
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.DS",
+    "value": 117
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.DL",
+    "value": 24
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.SE",
+    "value": 144
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.CE",
+    "value": 141
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.MS",
+    "value": 9
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.SC",
+    "value": 12
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.DC",
+    "value": 450
+  },
+  {
+    "source": "cs.MA",
+    "target": "cs.CV",
+    "value": 122
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.IR",
+    "value": 517
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.PL",
+    "value": 59
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.CG",
+    "value": 1
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.GR",
+    "value": 11
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.RO",
+    "value": 59
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.DB",
+    "value": 103
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.IT",
+    "value": 28
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.NE",
+    "value": 321
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.DS",
+    "value": 36
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.DL",
+    "value": 188
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.SE",
+    "value": 63
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.CE",
+    "value": 16
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.MS",
+    "value": 16
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.SC",
+    "value": 74
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.DC",
+    "value": 18
+  },
+  {
+    "source": "cs.CL",
+    "target": "cs.CV",
+    "value": 82
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.PL",
+    "value": 24
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.CG",
+    "value": 18
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.GR",
+    "value": 11
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.RO",
+    "value": 4
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.DB",
+    "value": 432
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.IT",
+    "value": 25
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.NE",
+    "value": 60
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.DS",
+    "value": 121
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.DL",
+    "value": 541
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.SE",
+    "value": 53
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.CE",
+    "value": 25
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.MS",
+    "value": 6
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.SC",
+    "value": 4
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.DC",
+    "value": 65
+  },
+  {
+    "source": "cs.IR",
+    "target": "cs.CV",
+    "value": 67
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.CG",
+    "value": 8
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.GR",
+    "value": 22
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.RO",
+    "value": 35
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.DB",
+    "value": 219
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.IT",
+    "value": 11
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.NE",
+    "value": 30
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.DS",
+    "value": 69
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.DL",
+    "value": 0
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.SE",
+    "value": 1034
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.CE",
+    "value": 60
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.MS",
+    "value": 163
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.SC",
+    "value": 153
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.DC",
+    "value": 488
+  },
+  {
+    "source": "cs.PL",
+    "target": "cs.CV",
+    "value": 7
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.GR",
+    "value": 344
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.RO",
+    "value": 131
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.DB",
+    "value": 64
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.IT",
+    "value": 19
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.NE",
+    "value": 27
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.DS",
+    "value": 714
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.DL",
+    "value": 4
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.SE",
+    "value": 11
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.CE",
+    "value": 110
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.MS",
+    "value": 94
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.SC",
+    "value": 128
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.DC",
+    "value": 66
+  },
+  {
+    "source": "cs.CG",
+    "target": "cs.CV",
+    "value": 189
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.RO",
+    "value": 92
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.DB",
+    "value": 5
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.IT",
+    "value": 15
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.NE",
+    "value": 23
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.DS",
+    "value": 40
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.DL",
+    "value": 13
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.SE",
+    "value": 12
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.CE",
+    "value": 46
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.MS",
+    "value": 29
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.SC",
+    "value": 8
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.DC",
+    "value": 41
+  },
+  {
+    "source": "cs.GR",
+    "target": "cs.CV",
+    "value": 792
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.DB",
+    "value": 8
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.IT",
+    "value": 14
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.NE",
+    "value": 196
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.DS",
+    "value": 59
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.DL",
+    "value": 3
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.SE",
+    "value": 93
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.CE",
+    "value": 48
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.MS",
+    "value": 13
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.SC",
+    "value": 51
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.DC",
+    "value": 123
+  },
+  {
+    "source": "cs.RO",
+    "target": "cs.CV",
+    "value": 435
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.IT",
+    "value": 41
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.NE",
+    "value": 20
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.DS",
+    "value": 541
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.DL",
+    "value": 161
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.SE",
+    "value": 148
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.CE",
+    "value": 72
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.MS",
+    "value": 15
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.SC",
+    "value": 5
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.DC",
+    "value": 592
+  },
+  {
+    "source": "cs.DB",
+    "target": "cs.CV",
+    "value": 55
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.NE",
+    "value": 44
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.DS",
+    "value": 99
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.DL",
+    "value": 7
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.SE",
+    "value": 11
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.CE",
+    "value": 64
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.MS",
+    "value": 13
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.SC",
+    "value": 40
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.DC",
+    "value": 140
+  },
+  {
+    "source": "cs.IT",
+    "target": "cs.CV",
+    "value": 32
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.DS",
+    "value": 76
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.DL",
+    "value": 7
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.SE",
+    "value": 48
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.CE",
+    "value": 291
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.MS",
+    "value": 68
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.SC",
+    "value": 44
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.DC",
+    "value": 179
+  },
+  {
+    "source": "cs.NE",
+    "target": "cs.CV",
+    "value": 572
+  },
+  {
+    "source": "cs.DS",
+    "target": "cs.DL",
+    "value": 21
+  },
+  {
+    "source": "cs.DS",
+    "target": "cs.SE",
+    "value": 52
+  },
+  {
+    "source": "cs.DS",
+    "target": "cs.CE",
+    "value": 179
+  },
+  {
+    "source": "cs.DS",
+    "target": "cs.MS",
+    "value": 137
+  },
+  {
+    "source": "cs.DS",
+    "target": "cs.SC",
+    "value": 145
+  },
+  {
+    "source": "cs.DS",
+    "target": "cs.DC",
+    "value": 644
+  },
+  {
+    "source": "cs.DS",
+    "target": "cs.CV",
+    "value": 37
+  },
+  {
+    "source": "cs.DL",
+    "target": "cs.SE",
+    "value": 54
+  },
+  {
+    "source": "cs.DL",
+    "target": "cs.CE",
+    "value": 17
+  },
+  {
+    "source": "cs.DL",
+    "target": "cs.MS",
+    "value": 42
+  },
+  {
+    "source": "cs.DL",
+    "target": "cs.SC",
+    "value": 1
+  },
+  {
+    "source": "cs.DL",
+    "target": "cs.DC",
+    "value": 22
+  },
+  {
+    "source": "cs.DL",
+    "target": "cs.CV",
+    "value": 26
+  },
+  {
+    "source": "cs.SE",
+    "target": "cs.CE",
+    "value": 97
+  },
+  {
+    "source": "cs.SE",
+    "target": "cs.MS",
+    "value": 139
+  },
+  {
+    "source": "cs.SE",
+    "target": "cs.SC",
+    "value": 96
+  },
+  {
+    "source": "cs.SE",
+    "target": "cs.DC",
+    "value": 476
+  },
+  {
+    "source": "cs.SE",
+    "target": "cs.CV",
+    "value": 33
+  },
+  {
+    "source": "cs.CE",
+    "target": "cs.MS",
+    "value": 311
+  },
+  {
+    "source": "cs.CE",
+    "target": "cs.SC",
+    "value": 19
+  },
+  {
+    "source": "cs.CE",
+    "target": "cs.DC",
+    "value": 325
+  },
+  {
+    "source": "cs.CE",
+    "target": "cs.CV",
+    "value": 102
+  },
+  {
+    "source": "cs.MS",
+    "target": "cs.SC",
+    "value": 347
+  },
+  {
+    "source": "cs.MS",
+    "target": "cs.DC",
+    "value": 473
+  },
+  {
+    "source": "cs.MS",
+    "target": "cs.CV",
+    "value": 40
+  },
+  {
+    "source": "cs.SC",
+    "target": "cs.DC",
+    "value": 59
+  },
+  {
+    "source": "cs.SC",
+    "target": "cs.CV",
+    "value": 37
+  },
+  {
+    "source": "cs.DC",
+    "target": "cs.CV",
+    "value": 58
+  }
+]

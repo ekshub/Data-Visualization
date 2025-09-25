@@ -1,0 +1,16 @@
+[
+    {
+        "title": "The problem of compatible representatives",
+        "authors": [
+            "Donald E. Knuth",
+            "Arvind Raghunathan"
+        ],
+        "summary": "The purpose of this note is to attach a name to a natural class of combinatorial problems and to point out that this class includes many important special cases. We also show that a simple problem of placing nonoverlapping labels on a rectangular map is NP-complete.",
+        "published": "1992-07-01T00:00:00Z",
+        "link": "http://arxiv.org/abs/cs/9301116v1",
+        "categories": [
+            "cs.DS",
+            "math.CO"
+        ]
+    }
+]

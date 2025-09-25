@@ -1,0 +1,3192 @@
+[
+    {
+        "category": "cs.AI",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 6
+            },
+            {
+                "year": 1994,
+                "count": 14
+            },
+            {
+                "year": 1995,
+                "count": 27
+            },
+            {
+                "year": 1996,
+                "count": 28
+            },
+            {
+                "year": 1997,
+                "count": 21
+            },
+            {
+                "year": 1998,
+                "count": 48
+            },
+            {
+                "year": 1999,
+                "count": 78
+            },
+            {
+                "year": 2000,
+                "count": 228
+            },
+            {
+                "year": 2001,
+                "count": 139
+            },
+            {
+                "year": 2002,
+                "count": 195
+            },
+            {
+                "year": 2003,
+                "count": 232
+            },
+            {
+                "year": 2004,
+                "count": 274
+            },
+            {
+                "year": 2005,
+                "count": 299
+            },
+            {
+                "year": 2006,
+                "count": 303
+            },
+            {
+                "year": 2007,
+                "count": 322
+            },
+            {
+                "year": 2008,
+                "count": 472
+            },
+            {
+                "year": 2009,
+                "count": 648
+            },
+            {
+                "year": 2010,
+                "count": 700
+            },
+            {
+                "year": 2011,
+                "count": 1010
+            },
+            {
+                "year": 2012,
+                "count": 1431
+            },
+            {
+                "year": 2013,
+                "count": 2012
+            },
+            {
+                "year": 2014,
+                "count": 1258
+            },
+            {
+                "year": 2015,
+                "count": 570
+            },
+            {
+                "year": 2016,
+                "count": 521
+            },
+            {
+                "year": 2017,
+                "count": 308
+            },
+            {
+                "year": 2018,
+                "count": 277
+            },
+            {
+                "year": 2019,
+                "count": 326
+            },
+            {
+                "year": 2020,
+                "count": 332
+            },
+            {
+                "year": 2021,
+                "count": 388
+            },
+            {
+                "year": 2022,
+                "count": 400
+            },
+            {
+                "year": 2023,
+                "count": 146
+            },
+            {
+                "year": 2024,
+                "count": 73
+            }
+        ]
+    },
+    {
+        "category": "cs.LG",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 4
+            },
+            {
+                "year": 1998,
+                "count": 15
+            },
+            {
+                "year": 1999,
+                "count": 61
+            },
+            {
+                "year": 2000,
+                "count": 69
+            },
+            {
+                "year": 2001,
+                "count": 53
+            },
+            {
+                "year": 2002,
+                "count": 82
+            },
+            {
+                "year": 2003,
+                "count": 66
+            },
+            {
+                "year": 2004,
+                "count": 83
+            },
+            {
+                "year": 2005,
+                "count": 133
+            },
+            {
+                "year": 2006,
+                "count": 121
+            },
+            {
+                "year": 2007,
+                "count": 130
+            },
+            {
+                "year": 2008,
+                "count": 204
+            },
+            {
+                "year": 2009,
+                "count": 329
+            },
+            {
+                "year": 2010,
+                "count": 124
+            },
+            {
+                "year": 2011,
+                "count": 142
+            },
+            {
+                "year": 2012,
+                "count": 359
+            },
+            {
+                "year": 2013,
+                "count": 431
+            },
+            {
+                "year": 2014,
+                "count": 534
+            },
+            {
+                "year": 2015,
+                "count": 563
+            },
+            {
+                "year": 2016,
+                "count": 661
+            },
+            {
+                "year": 2017,
+                "count": 220
+            },
+            {
+                "year": 2018,
+                "count": 298
+            },
+            {
+                "year": 2019,
+                "count": 489
+            },
+            {
+                "year": 2020,
+                "count": 478
+            },
+            {
+                "year": 2021,
+                "count": 481
+            },
+            {
+                "year": 2022,
+                "count": 435
+            },
+            {
+                "year": 2023,
+                "count": 145
+            },
+            {
+                "year": 2024,
+                "count": 92
+            }
+        ]
+    },
+    {
+        "category": "cs.CC",
+        "values": [
+            {
+                "year": 1990,
+                "count": 1
+            },
+            {
+                "year": 1991,
+                "count": 1
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 11
+            },
+            {
+                "year": 1995,
+                "count": 2
+            },
+            {
+                "year": 1996,
+                "count": 1
+            },
+            {
+                "year": 1997,
+                "count": 5
+            },
+            {
+                "year": 1998,
+                "count": 37
+            },
+            {
+                "year": 1999,
+                "count": 96
+            },
+            {
+                "year": 2000,
+                "count": 67
+            },
+            {
+                "year": 2001,
+                "count": 92
+            },
+            {
+                "year": 2002,
+                "count": 128
+            },
+            {
+                "year": 2003,
+                "count": 120
+            },
+            {
+                "year": 2004,
+                "count": 102
+            },
+            {
+                "year": 2005,
+                "count": 186
+            },
+            {
+                "year": 2006,
+                "count": 243
+            },
+            {
+                "year": 2007,
+                "count": 287
+            },
+            {
+                "year": 2008,
+                "count": 395
+            },
+            {
+                "year": 2009,
+                "count": 529
+            },
+            {
+                "year": 2010,
+                "count": 562
+            },
+            {
+                "year": 2011,
+                "count": 513
+            },
+            {
+                "year": 2012,
+                "count": 586
+            },
+            {
+                "year": 2013,
+                "count": 591
+            },
+            {
+                "year": 2014,
+                "count": 214
+            },
+            {
+                "year": 2015,
+                "count": 28
+            },
+            {
+                "year": 2016,
+                "count": 32
+            },
+            {
+                "year": 2017,
+                "count": 35
+            },
+            {
+                "year": 2018,
+                "count": 28
+            },
+            {
+                "year": 2019,
+                "count": 21
+            },
+            {
+                "year": 2020,
+                "count": 21
+            },
+            {
+                "year": 2021,
+                "count": 11
+            },
+            {
+                "year": 2022,
+                "count": 19
+            },
+            {
+                "year": 2023,
+                "count": 9
+            },
+            {
+                "year": 2024,
+                "count": 9
+            }
+        ]
+    },
+    {
+        "category": "cs.LO",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 2
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 1
+            },
+            {
+                "year": 1998,
+                "count": 30
+            },
+            {
+                "year": 1999,
+                "count": 43
+            },
+            {
+                "year": 2000,
+                "count": 142
+            },
+            {
+                "year": 2001,
+                "count": 134
+            },
+            {
+                "year": 2002,
+                "count": 120
+            },
+            {
+                "year": 2003,
+                "count": 114
+            },
+            {
+                "year": 2004,
+                "count": 147
+            },
+            {
+                "year": 2005,
+                "count": 196
+            },
+            {
+                "year": 2006,
+                "count": 247
+            },
+            {
+                "year": 2007,
+                "count": 261
+            },
+            {
+                "year": 2008,
+                "count": 406
+            },
+            {
+                "year": 2009,
+                "count": 573
+            },
+            {
+                "year": 2010,
+                "count": 815
+            },
+            {
+                "year": 2011,
+                "count": 826
+            },
+            {
+                "year": 2012,
+                "count": 930
+            },
+            {
+                "year": 2013,
+                "count": 456
+            },
+            {
+                "year": 2014,
+                "count": 326
+            },
+            {
+                "year": 2015,
+                "count": 215
+            },
+            {
+                "year": 2016,
+                "count": 227
+            },
+            {
+                "year": 2017,
+                "count": 210
+            },
+            {
+                "year": 2018,
+                "count": 172
+            },
+            {
+                "year": 2019,
+                "count": 96
+            },
+            {
+                "year": 2020,
+                "count": 58
+            },
+            {
+                "year": 2021,
+                "count": 46
+            },
+            {
+                "year": 2022,
+                "count": 36
+            },
+            {
+                "year": 2023,
+                "count": 30
+            },
+            {
+                "year": 2024,
+                "count": 33
+            }
+        ]
+    },
+    {
+        "category": "cs.MA",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 11
+            },
+            {
+                "year": 1999,
+                "count": 25
+            },
+            {
+                "year": 2000,
+                "count": 12
+            },
+            {
+                "year": 2001,
+                "count": 14
+            },
+            {
+                "year": 2002,
+                "count": 35
+            },
+            {
+                "year": 2003,
+                "count": 29
+            },
+            {
+                "year": 2004,
+                "count": 35
+            },
+            {
+                "year": 2005,
+                "count": 48
+            },
+            {
+                "year": 2006,
+                "count": 76
+            },
+            {
+                "year": 2007,
+                "count": 48
+            },
+            {
+                "year": 2008,
+                "count": 133
+            },
+            {
+                "year": 2009,
+                "count": 129
+            },
+            {
+                "year": 2010,
+                "count": 153
+            },
+            {
+                "year": 2011,
+                "count": 161
+            },
+            {
+                "year": 2012,
+                "count": 216
+            },
+            {
+                "year": 2013,
+                "count": 219
+            },
+            {
+                "year": 2014,
+                "count": 301
+            },
+            {
+                "year": 2015,
+                "count": 208
+            },
+            {
+                "year": 2016,
+                "count": 270
+            },
+            {
+                "year": 2017,
+                "count": 331
+            },
+            {
+                "year": 2018,
+                "count": 470
+            },
+            {
+                "year": 2019,
+                "count": 733
+            },
+            {
+                "year": 2020,
+                "count": 937
+            },
+            {
+                "year": 2021,
+                "count": 965
+            },
+            {
+                "year": 2022,
+                "count": 1039
+            },
+            {
+                "year": 2023,
+                "count": 218
+            },
+            {
+                "year": 2024,
+                "count": 6
+            }
+        ]
+    },
+    {
+        "category": "cs.CL",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 223
+            },
+            {
+                "year": 1995,
+                "count": 225
+            },
+            {
+                "year": 1996,
+                "count": 202
+            },
+            {
+                "year": 1997,
+                "count": 165
+            },
+            {
+                "year": 1998,
+                "count": 121
+            },
+            {
+                "year": 1999,
+                "count": 78
+            },
+            {
+                "year": 2000,
+                "count": 167
+            },
+            {
+                "year": 2001,
+                "count": 110
+            },
+            {
+                "year": 2002,
+                "count": 94
+            },
+            {
+                "year": 2003,
+                "count": 83
+            },
+            {
+                "year": 2004,
+                "count": 100
+            },
+            {
+                "year": 2005,
+                "count": 53
+            },
+            {
+                "year": 2006,
+                "count": 97
+            },
+            {
+                "year": 2007,
+                "count": 97
+            },
+            {
+                "year": 2008,
+                "count": 110
+            },
+            {
+                "year": 2009,
+                "count": 122
+            },
+            {
+                "year": 2010,
+                "count": 106
+            },
+            {
+                "year": 2011,
+                "count": 155
+            },
+            {
+                "year": 2012,
+                "count": 274
+            },
+            {
+                "year": 2013,
+                "count": 408
+            },
+            {
+                "year": 2014,
+                "count": 172
+            },
+            {
+                "year": 2015,
+                "count": 165
+            },
+            {
+                "year": 2016,
+                "count": 220
+            },
+            {
+                "year": 2017,
+                "count": 91
+            },
+            {
+                "year": 2018,
+                "count": 56
+            },
+            {
+                "year": 2019,
+                "count": 53
+            },
+            {
+                "year": 2020,
+                "count": 25
+            },
+            {
+                "year": 2021,
+                "count": 25
+            },
+            {
+                "year": 2022,
+                "count": 19
+            },
+            {
+                "year": 2023,
+                "count": 17
+            },
+            {
+                "year": 2024,
+                "count": 19
+            }
+        ]
+    },
+    {
+        "category": "cs.IR",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 2
+            },
+            {
+                "year": 1999,
+                "count": 29
+            },
+            {
+                "year": 2000,
+                "count": 37
+            },
+            {
+                "year": 2001,
+                "count": 40
+            },
+            {
+                "year": 2002,
+                "count": 41
+            },
+            {
+                "year": 2003,
+                "count": 79
+            },
+            {
+                "year": 2004,
+                "count": 71
+            },
+            {
+                "year": 2005,
+                "count": 93
+            },
+            {
+                "year": 2006,
+                "count": 136
+            },
+            {
+                "year": 2007,
+                "count": 108
+            },
+            {
+                "year": 2008,
+                "count": 144
+            },
+            {
+                "year": 2009,
+                "count": 200
+            },
+            {
+                "year": 2010,
+                "count": 74
+            },
+            {
+                "year": 2011,
+                "count": 90
+            },
+            {
+                "year": 2012,
+                "count": 201
+            },
+            {
+                "year": 2013,
+                "count": 176
+            },
+            {
+                "year": 2014,
+                "count": 131
+            },
+            {
+                "year": 2015,
+                "count": 110
+            },
+            {
+                "year": 2016,
+                "count": 97
+            },
+            {
+                "year": 2017,
+                "count": 82
+            },
+            {
+                "year": 2018,
+                "count": 90
+            },
+            {
+                "year": 2019,
+                "count": 82
+            },
+            {
+                "year": 2020,
+                "count": 9
+            },
+            {
+                "year": 2021,
+                "count": 13
+            },
+            {
+                "year": 2022,
+                "count": 3
+            },
+            {
+                "year": 2023,
+                "count": 1
+            },
+            {
+                "year": 2024,
+                "count": 0
+            }
+        ]
+    },
+    {
+        "category": "cs.PL",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 1
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 18
+            },
+            {
+                "year": 1999,
+                "count": 20
+            },
+            {
+                "year": 2000,
+                "count": 86
+            },
+            {
+                "year": 2001,
+                "count": 116
+            },
+            {
+                "year": 2002,
+                "count": 51
+            },
+            {
+                "year": 2003,
+                "count": 52
+            },
+            {
+                "year": 2004,
+                "count": 97
+            },
+            {
+                "year": 2005,
+                "count": 81
+            },
+            {
+                "year": 2006,
+                "count": 122
+            },
+            {
+                "year": 2007,
+                "count": 122
+            },
+            {
+                "year": 2008,
+                "count": 124
+            },
+            {
+                "year": 2009,
+                "count": 242
+            },
+            {
+                "year": 2010,
+                "count": 384
+            },
+            {
+                "year": 2011,
+                "count": 406
+            },
+            {
+                "year": 2012,
+                "count": 373
+            },
+            {
+                "year": 2013,
+                "count": 436
+            },
+            {
+                "year": 2014,
+                "count": 403
+            },
+            {
+                "year": 2015,
+                "count": 401
+            },
+            {
+                "year": 2016,
+                "count": 494
+            },
+            {
+                "year": 2017,
+                "count": 574
+            },
+            {
+                "year": 2018,
+                "count": 611
+            },
+            {
+                "year": 2019,
+                "count": 55
+            },
+            {
+                "year": 2020,
+                "count": 21
+            },
+            {
+                "year": 2021,
+                "count": 17
+            },
+            {
+                "year": 2022,
+                "count": 20
+            },
+            {
+                "year": 2023,
+                "count": 11
+            },
+            {
+                "year": 2024,
+                "count": 22
+            }
+        ]
+    },
+    {
+        "category": "cs.CG",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 21
+            },
+            {
+                "year": 1999,
+                "count": 37
+            },
+            {
+                "year": 2000,
+                "count": 18
+            },
+            {
+                "year": 2001,
+                "count": 20
+            },
+            {
+                "year": 2002,
+                "count": 81
+            },
+            {
+                "year": 2003,
+                "count": 42
+            },
+            {
+                "year": 2004,
+                "count": 38
+            },
+            {
+                "year": 2005,
+                "count": 52
+            },
+            {
+                "year": 2006,
+                "count": 64
+            },
+            {
+                "year": 2007,
+                "count": 101
+            },
+            {
+                "year": 2008,
+                "count": 167
+            },
+            {
+                "year": 2009,
+                "count": 199
+            },
+            {
+                "year": 2010,
+                "count": 257
+            },
+            {
+                "year": 2011,
+                "count": 264
+            },
+            {
+                "year": 2012,
+                "count": 351
+            },
+            {
+                "year": 2013,
+                "count": 405
+            },
+            {
+                "year": 2014,
+                "count": 356
+            },
+            {
+                "year": 2015,
+                "count": 396
+            },
+            {
+                "year": 2016,
+                "count": 445
+            },
+            {
+                "year": 2017,
+                "count": 91
+            },
+            {
+                "year": 2018,
+                "count": 35
+            },
+            {
+                "year": 2019,
+                "count": 65
+            },
+            {
+                "year": 2020,
+                "count": 29
+            },
+            {
+                "year": 2021,
+                "count": 19
+            },
+            {
+                "year": 2022,
+                "count": 10
+            },
+            {
+                "year": 2023,
+                "count": 6
+            },
+            {
+                "year": 2024,
+                "count": 12
+            }
+        ]
+    },
+    {
+        "category": "cs.GR",
+        "values": [
+            {
+                "year": 1990,
+                "count": 1
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 10
+            },
+            {
+                "year": 1999,
+                "count": 4
+            },
+            {
+                "year": 2000,
+                "count": 5
+            },
+            {
+                "year": 2001,
+                "count": 5
+            },
+            {
+                "year": 2002,
+                "count": 12
+            },
+            {
+                "year": 2003,
+                "count": 23
+            },
+            {
+                "year": 2004,
+                "count": 10
+            },
+            {
+                "year": 2005,
+                "count": 14
+            },
+            {
+                "year": 2006,
+                "count": 22
+            },
+            {
+                "year": 2007,
+                "count": 14
+            },
+            {
+                "year": 2008,
+                "count": 37
+            },
+            {
+                "year": 2009,
+                "count": 43
+            },
+            {
+                "year": 2010,
+                "count": 77
+            },
+            {
+                "year": 2011,
+                "count": 51
+            },
+            {
+                "year": 2012,
+                "count": 95
+            },
+            {
+                "year": 2013,
+                "count": 117
+            },
+            {
+                "year": 2014,
+                "count": 104
+            },
+            {
+                "year": 2015,
+                "count": 144
+            },
+            {
+                "year": 2016,
+                "count": 214
+            },
+            {
+                "year": 2017,
+                "count": 278
+            },
+            {
+                "year": 2018,
+                "count": 373
+            },
+            {
+                "year": 2019,
+                "count": 537
+            },
+            {
+                "year": 2020,
+                "count": 205
+            },
+            {
+                "year": 2021,
+                "count": 2
+            },
+            {
+                "year": 2022,
+                "count": 5
+            },
+            {
+                "year": 2023,
+                "count": 3
+            },
+            {
+                "year": 2024,
+                "count": 5
+            }
+        ]
+    },
+    {
+        "category": "cs.RO",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 5
+            },
+            {
+                "year": 1999,
+                "count": 0
+            },
+            {
+                "year": 2000,
+                "count": 17
+            },
+            {
+                "year": 2001,
+                "count": 1
+            },
+            {
+                "year": 2002,
+                "count": 12
+            },
+            {
+                "year": 2003,
+                "count": 6
+            },
+            {
+                "year": 2004,
+                "count": 34
+            },
+            {
+                "year": 2005,
+                "count": 35
+            },
+            {
+                "year": 2006,
+                "count": 51
+            },
+            {
+                "year": 2007,
+                "count": 109
+            },
+            {
+                "year": 2008,
+                "count": 87
+            },
+            {
+                "year": 2009,
+                "count": 99
+            },
+            {
+                "year": 2010,
+                "count": 114
+            },
+            {
+                "year": 2011,
+                "count": 161
+            },
+            {
+                "year": 2012,
+                "count": 230
+            },
+            {
+                "year": 2013,
+                "count": 292
+            },
+            {
+                "year": 2014,
+                "count": 365
+            },
+            {
+                "year": 2015,
+                "count": 448
+            },
+            {
+                "year": 2016,
+                "count": 686
+            },
+            {
+                "year": 2017,
+                "count": 85
+            },
+            {
+                "year": 2018,
+                "count": 65
+            },
+            {
+                "year": 2019,
+                "count": 149
+            },
+            {
+                "year": 2020,
+                "count": 171
+            },
+            {
+                "year": 2021,
+                "count": 174
+            },
+            {
+                "year": 2022,
+                "count": 194
+            },
+            {
+                "year": 2023,
+                "count": 51
+            },
+            {
+                "year": 2024,
+                "count": 9
+            }
+        ]
+    },
+    {
+        "category": "cs.DB",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 12
+            },
+            {
+                "year": 1999,
+                "count": 27
+            },
+            {
+                "year": 2000,
+                "count": 35
+            },
+            {
+                "year": 2001,
+                "count": 62
+            },
+            {
+                "year": 2002,
+                "count": 57
+            },
+            {
+                "year": 2003,
+                "count": 74
+            },
+            {
+                "year": 2004,
+                "count": 83
+            },
+            {
+                "year": 2005,
+                "count": 73
+            },
+            {
+                "year": 2006,
+                "count": 92
+            },
+            {
+                "year": 2007,
+                "count": 141
+            },
+            {
+                "year": 2008,
+                "count": 141
+            },
+            {
+                "year": 2009,
+                "count": 275
+            },
+            {
+                "year": 2010,
+                "count": 265
+            },
+            {
+                "year": 2011,
+                "count": 304
+            },
+            {
+                "year": 2012,
+                "count": 488
+            },
+            {
+                "year": 2013,
+                "count": 393
+            },
+            {
+                "year": 2014,
+                "count": 428
+            },
+            {
+                "year": 2015,
+                "count": 411
+            },
+            {
+                "year": 2016,
+                "count": 444
+            },
+            {
+                "year": 2017,
+                "count": 539
+            },
+            {
+                "year": 2018,
+                "count": 558
+            },
+            {
+                "year": 2019,
+                "count": 700
+            },
+            {
+                "year": 2020,
+                "count": 4
+            },
+            {
+                "year": 2021,
+                "count": 4
+            },
+            {
+                "year": 2022,
+                "count": 5
+            },
+            {
+                "year": 2023,
+                "count": 2
+            },
+            {
+                "year": 2024,
+                "count": 1
+            }
+        ]
+    },
+    {
+        "category": "cs.IT",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 1
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 1
+            },
+            {
+                "year": 1996,
+                "count": 1
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 1
+            },
+            {
+                "year": 1999,
+                "count": 14
+            },
+            {
+                "year": 2000,
+                "count": 14
+            },
+            {
+                "year": 2001,
+                "count": 20
+            },
+            {
+                "year": 2002,
+                "count": 29
+            },
+            {
+                "year": 2003,
+                "count": 40
+            },
+            {
+                "year": 2004,
+                "count": 84
+            },
+            {
+                "year": 2005,
+                "count": 282
+            },
+            {
+                "year": 2006,
+                "count": 52
+            },
+            {
+                "year": 2007,
+                "count": 70
+            },
+            {
+                "year": 2008,
+                "count": 86
+            },
+            {
+                "year": 2009,
+                "count": 108
+            },
+            {
+                "year": 2010,
+                "count": 79
+            },
+            {
+                "year": 2011,
+                "count": 88
+            },
+            {
+                "year": 2012,
+                "count": 77
+            },
+            {
+                "year": 2013,
+                "count": 78
+            },
+            {
+                "year": 2014,
+                "count": 62
+            },
+            {
+                "year": 2015,
+                "count": 28
+            },
+            {
+                "year": 2016,
+                "count": 24
+            },
+            {
+                "year": 2017,
+                "count": 18
+            },
+            {
+                "year": 2018,
+                "count": 28
+            },
+            {
+                "year": 2019,
+                "count": 20
+            },
+            {
+                "year": 2020,
+                "count": 17
+            },
+            {
+                "year": 2021,
+                "count": 15
+            },
+            {
+                "year": 2022,
+                "count": 17
+            },
+            {
+                "year": 2023,
+                "count": 6
+            },
+            {
+                "year": 2024,
+                "count": 3
+            }
+        ]
+    },
+    {
+        "category": "cs.NE",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 23
+            },
+            {
+                "year": 1999,
+                "count": 18
+            },
+            {
+                "year": 2000,
+                "count": 16
+            },
+            {
+                "year": 2001,
+                "count": 18
+            },
+            {
+                "year": 2002,
+                "count": 43
+            },
+            {
+                "year": 2003,
+                "count": 83
+            },
+            {
+                "year": 2004,
+                "count": 71
+            },
+            {
+                "year": 2005,
+                "count": 110
+            },
+            {
+                "year": 2006,
+                "count": 75
+            },
+            {
+                "year": 2007,
+                "count": 146
+            },
+            {
+                "year": 2008,
+                "count": 201
+            },
+            {
+                "year": 2009,
+                "count": 204
+            },
+            {
+                "year": 2010,
+                "count": 259
+            },
+            {
+                "year": 2011,
+                "count": 199
+            },
+            {
+                "year": 2012,
+                "count": 319
+            },
+            {
+                "year": 2013,
+                "count": 406
+            },
+            {
+                "year": 2014,
+                "count": 644
+            },
+            {
+                "year": 2015,
+                "count": 704
+            },
+            {
+                "year": 2016,
+                "count": 912
+            },
+            {
+                "year": 2017,
+                "count": 111
+            },
+            {
+                "year": 2018,
+                "count": 43
+            },
+            {
+                "year": 2019,
+                "count": 31
+            },
+            {
+                "year": 2020,
+                "count": 43
+            },
+            {
+                "year": 2021,
+                "count": 24
+            },
+            {
+                "year": 2022,
+                "count": 28
+            },
+            {
+                "year": 2023,
+                "count": 6
+            },
+            {
+                "year": 2024,
+                "count": 9
+            }
+        ]
+    },
+    {
+        "category": "cs.DS",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 1
+            },
+            {
+                "year": 1992,
+                "count": 1
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 3
+            },
+            {
+                "year": 1997,
+                "count": 8
+            },
+            {
+                "year": 1998,
+                "count": 17
+            },
+            {
+                "year": 1999,
+                "count": 49
+            },
+            {
+                "year": 2000,
+                "count": 65
+            },
+            {
+                "year": 2001,
+                "count": 85
+            },
+            {
+                "year": 2002,
+                "count": 125
+            },
+            {
+                "year": 2003,
+                "count": 105
+            },
+            {
+                "year": 2004,
+                "count": 128
+            },
+            {
+                "year": 2005,
+                "count": 131
+            },
+            {
+                "year": 2006,
+                "count": 213
+            },
+            {
+                "year": 2007,
+                "count": 275
+            },
+            {
+                "year": 2008,
+                "count": 483
+            },
+            {
+                "year": 2009,
+                "count": 725
+            },
+            {
+                "year": 2010,
+                "count": 669
+            },
+            {
+                "year": 2011,
+                "count": 301
+            },
+            {
+                "year": 2012,
+                "count": 321
+            },
+            {
+                "year": 2013,
+                "count": 331
+            },
+            {
+                "year": 2014,
+                "count": 254
+            },
+            {
+                "year": 2015,
+                "count": 135
+            },
+            {
+                "year": 2016,
+                "count": 154
+            },
+            {
+                "year": 2017,
+                "count": 72
+            },
+            {
+                "year": 2018,
+                "count": 63
+            },
+            {
+                "year": 2019,
+                "count": 96
+            },
+            {
+                "year": 2020,
+                "count": 26
+            },
+            {
+                "year": 2021,
+                "count": 24
+            },
+            {
+                "year": 2022,
+                "count": 11
+            },
+            {
+                "year": 2023,
+                "count": 13
+            },
+            {
+                "year": 2024,
+                "count": 6
+            }
+        ]
+    },
+    {
+        "category": "cs.DL",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 10
+            },
+            {
+                "year": 1999,
+                "count": 41
+            },
+            {
+                "year": 2000,
+                "count": 18
+            },
+            {
+                "year": 2001,
+                "count": 14
+            },
+            {
+                "year": 2002,
+                "count": 24
+            },
+            {
+                "year": 2003,
+                "count": 36
+            },
+            {
+                "year": 2004,
+                "count": 29
+            },
+            {
+                "year": 2005,
+                "count": 48
+            },
+            {
+                "year": 2006,
+                "count": 72
+            },
+            {
+                "year": 2007,
+                "count": 67
+            },
+            {
+                "year": 2008,
+                "count": 68
+            },
+            {
+                "year": 2009,
+                "count": 140
+            },
+            {
+                "year": 2010,
+                "count": 139
+            },
+            {
+                "year": 2011,
+                "count": 172
+            },
+            {
+                "year": 2012,
+                "count": 248
+            },
+            {
+                "year": 2013,
+                "count": 364
+            },
+            {
+                "year": 2014,
+                "count": 265
+            },
+            {
+                "year": 2015,
+                "count": 251
+            },
+            {
+                "year": 2016,
+                "count": 269
+            },
+            {
+                "year": 2017,
+                "count": 312
+            },
+            {
+                "year": 2018,
+                "count": 440
+            },
+            {
+                "year": 2019,
+                "count": 142
+            },
+            {
+                "year": 2020,
+                "count": 2
+            },
+            {
+                "year": 2021,
+                "count": 0
+            },
+            {
+                "year": 2022,
+                "count": 0
+            },
+            {
+                "year": 2023,
+                "count": 0
+            },
+            {
+                "year": 2024,
+                "count": 0
+            }
+        ]
+    },
+    {
+        "category": "cs.SE",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 15
+            },
+            {
+                "year": 1999,
+                "count": 17
+            },
+            {
+                "year": 2000,
+                "count": 37
+            },
+            {
+                "year": 2001,
+                "count": 50
+            },
+            {
+                "year": 2002,
+                "count": 29
+            },
+            {
+                "year": 2003,
+                "count": 63
+            },
+            {
+                "year": 2004,
+                "count": 57
+            },
+            {
+                "year": 2005,
+                "count": 59
+            },
+            {
+                "year": 2006,
+                "count": 111
+            },
+            {
+                "year": 2007,
+                "count": 87
+            },
+            {
+                "year": 2008,
+                "count": 174
+            },
+            {
+                "year": 2009,
+                "count": 242
+            },
+            {
+                "year": 2010,
+                "count": 362
+            },
+            {
+                "year": 2011,
+                "count": 391
+            },
+            {
+                "year": 2012,
+                "count": 535
+            },
+            {
+                "year": 2013,
+                "count": 593
+            },
+            {
+                "year": 2014,
+                "count": 823
+            },
+            {
+                "year": 2015,
+                "count": 574
+            },
+            {
+                "year": 2016,
+                "count": 621
+            },
+            {
+                "year": 2017,
+                "count": 628
+            },
+            {
+                "year": 2018,
+                "count": 92
+            },
+            {
+                "year": 2019,
+                "count": 34
+            },
+            {
+                "year": 2020,
+                "count": 17
+            },
+            {
+                "year": 2021,
+                "count": 35
+            },
+            {
+                "year": 2022,
+                "count": 23
+            },
+            {
+                "year": 2023,
+                "count": 2
+            },
+            {
+                "year": 2024,
+                "count": 13
+            }
+        ]
+    },
+    {
+        "category": "cs.CE",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 3
+            },
+            {
+                "year": 1998,
+                "count": 0
+            },
+            {
+                "year": 1999,
+                "count": 20
+            },
+            {
+                "year": 2000,
+                "count": 22
+            },
+            {
+                "year": 2001,
+                "count": 40
+            },
+            {
+                "year": 2002,
+                "count": 82
+            },
+            {
+                "year": 2003,
+                "count": 38
+            },
+            {
+                "year": 2004,
+                "count": 45
+            },
+            {
+                "year": 2005,
+                "count": 73
+            },
+            {
+                "year": 2006,
+                "count": 67
+            },
+            {
+                "year": 2007,
+                "count": 124
+            },
+            {
+                "year": 2008,
+                "count": 81
+            },
+            {
+                "year": 2009,
+                "count": 134
+            },
+            {
+                "year": 2010,
+                "count": 202
+            },
+            {
+                "year": 2011,
+                "count": 186
+            },
+            {
+                "year": 2012,
+                "count": 295
+            },
+            {
+                "year": 2013,
+                "count": 417
+            },
+            {
+                "year": 2014,
+                "count": 477
+            },
+            {
+                "year": 2015,
+                "count": 327
+            },
+            {
+                "year": 2016,
+                "count": 255
+            },
+            {
+                "year": 2017,
+                "count": 354
+            },
+            {
+                "year": 2018,
+                "count": 396
+            },
+            {
+                "year": 2019,
+                "count": 449
+            },
+            {
+                "year": 2020,
+                "count": 703
+            },
+            {
+                "year": 2021,
+                "count": 489
+            },
+            {
+                "year": 2022,
+                "count": 20
+            },
+            {
+                "year": 2023,
+                "count": 7
+            },
+            {
+                "year": 2024,
+                "count": 10
+            }
+        ]
+    },
+    {
+        "category": "cs.MS",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 2
+            },
+            {
+                "year": 1999,
+                "count": 9
+            },
+            {
+                "year": 2000,
+                "count": 5
+            },
+            {
+                "year": 2001,
+                "count": 9
+            },
+            {
+                "year": 2002,
+                "count": 3
+            },
+            {
+                "year": 2003,
+                "count": 17
+            },
+            {
+                "year": 2004,
+                "count": 15
+            },
+            {
+                "year": 2005,
+                "count": 18
+            },
+            {
+                "year": 2006,
+                "count": 46
+            },
+            {
+                "year": 2007,
+                "count": 36
+            },
+            {
+                "year": 2008,
+                "count": 29
+            },
+            {
+                "year": 2009,
+                "count": 64
+            },
+            {
+                "year": 2010,
+                "count": 97
+            },
+            {
+                "year": 2011,
+                "count": 107
+            },
+            {
+                "year": 2012,
+                "count": 197
+            },
+            {
+                "year": 2013,
+                "count": 209
+            },
+            {
+                "year": 2014,
+                "count": 222
+            },
+            {
+                "year": 2015,
+                "count": 168
+            },
+            {
+                "year": 2016,
+                "count": 172
+            },
+            {
+                "year": 2017,
+                "count": 154
+            },
+            {
+                "year": 2018,
+                "count": 176
+            },
+            {
+                "year": 2019,
+                "count": 162
+            },
+            {
+                "year": 2020,
+                "count": 217
+            },
+            {
+                "year": 2021,
+                "count": 252
+            },
+            {
+                "year": 2022,
+                "count": 172
+            },
+            {
+                "year": 2023,
+                "count": 177
+            },
+            {
+                "year": 2024,
+                "count": 188
+            }
+        ]
+    },
+    {
+        "category": "cs.SC",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 5
+            },
+            {
+                "year": 1999,
+                "count": 6
+            },
+            {
+                "year": 2000,
+                "count": 7
+            },
+            {
+                "year": 2001,
+                "count": 12
+            },
+            {
+                "year": 2002,
+                "count": 10
+            },
+            {
+                "year": 2003,
+                "count": 34
+            },
+            {
+                "year": 2004,
+                "count": 27
+            },
+            {
+                "year": 2005,
+                "count": 41
+            },
+            {
+                "year": 2006,
+                "count": 69
+            },
+            {
+                "year": 2007,
+                "count": 43
+            },
+            {
+                "year": 2008,
+                "count": 110
+            },
+            {
+                "year": 2009,
+                "count": 118
+            },
+            {
+                "year": 2010,
+                "count": 160
+            },
+            {
+                "year": 2011,
+                "count": 131
+            },
+            {
+                "year": 2012,
+                "count": 147
+            },
+            {
+                "year": 2013,
+                "count": 161
+            },
+            {
+                "year": 2014,
+                "count": 155
+            },
+            {
+                "year": 2015,
+                "count": 106
+            },
+            {
+                "year": 2016,
+                "count": 151
+            },
+            {
+                "year": 2017,
+                "count": 147
+            },
+            {
+                "year": 2018,
+                "count": 167
+            },
+            {
+                "year": 2019,
+                "count": 179
+            },
+            {
+                "year": 2020,
+                "count": 222
+            },
+            {
+                "year": 2021,
+                "count": 201
+            },
+            {
+                "year": 2022,
+                "count": 215
+            },
+            {
+                "year": 2023,
+                "count": 233
+            },
+            {
+                "year": 2024,
+                "count": 258
+            }
+        ]
+    },
+    {
+        "category": "cs.DC",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 16
+            },
+            {
+                "year": 1999,
+                "count": 41
+            },
+            {
+                "year": 2000,
+                "count": 35
+            },
+            {
+                "year": 2001,
+                "count": 53
+            },
+            {
+                "year": 2002,
+                "count": 56
+            },
+            {
+                "year": 2003,
+                "count": 159
+            },
+            {
+                "year": 2004,
+                "count": 116
+            },
+            {
+                "year": 2005,
+                "count": 74
+            },
+            {
+                "year": 2006,
+                "count": 151
+            },
+            {
+                "year": 2007,
+                "count": 167
+            },
+            {
+                "year": 2008,
+                "count": 188
+            },
+            {
+                "year": 2009,
+                "count": 358
+            },
+            {
+                "year": 2010,
+                "count": 514
+            },
+            {
+                "year": 2011,
+                "count": 568
+            },
+            {
+                "year": 2012,
+                "count": 711
+            },
+            {
+                "year": 2013,
+                "count": 870
+            },
+            {
+                "year": 2014,
+                "count": 903
+            },
+            {
+                "year": 2015,
+                "count": 189
+            },
+            {
+                "year": 2016,
+                "count": 201
+            },
+            {
+                "year": 2017,
+                "count": 153
+            },
+            {
+                "year": 2018,
+                "count": 165
+            },
+            {
+                "year": 2019,
+                "count": 199
+            },
+            {
+                "year": 2020,
+                "count": 118
+            },
+            {
+                "year": 2021,
+                "count": 97
+            },
+            {
+                "year": 2022,
+                "count": 64
+            },
+            {
+                "year": 2023,
+                "count": 35
+            },
+            {
+                "year": 2024,
+                "count": 17
+            }
+        ]
+    },
+    {
+        "category": "cs.CV",
+        "values": [
+            {
+                "year": 1990,
+                "count": 0
+            },
+            {
+                "year": 1991,
+                "count": 0
+            },
+            {
+                "year": 1992,
+                "count": 0
+            },
+            {
+                "year": 1993,
+                "count": 0
+            },
+            {
+                "year": 1994,
+                "count": 0
+            },
+            {
+                "year": 1995,
+                "count": 0
+            },
+            {
+                "year": 1996,
+                "count": 0
+            },
+            {
+                "year": 1997,
+                "count": 0
+            },
+            {
+                "year": 1998,
+                "count": 0
+            },
+            {
+                "year": 1999,
+                "count": 2
+            },
+            {
+                "year": 2000,
+                "count": 13
+            },
+            {
+                "year": 2001,
+                "count": 6
+            },
+            {
+                "year": 2002,
+                "count": 16
+            },
+            {
+                "year": 2003,
+                "count": 13
+            },
+            {
+                "year": 2004,
+                "count": 41
+            },
+            {
+                "year": 2005,
+                "count": 33
+            },
+            {
+                "year": 2006,
+                "count": 19
+            },
+            {
+                "year": 2007,
+                "count": 31
+            },
+            {
+                "year": 2008,
+                "count": 49
+            },
+            {
+                "year": 2009,
+                "count": 70
+            },
+            {
+                "year": 2010,
+                "count": 41
+            },
+            {
+                "year": 2011,
+                "count": 96
+            },
+            {
+                "year": 2012,
+                "count": 123
+            },
+            {
+                "year": 2013,
+                "count": 162
+            },
+            {
+                "year": 2014,
+                "count": 231
+            },
+            {
+                "year": 2015,
+                "count": 285
+            },
+            {
+                "year": 2016,
+                "count": 460
+            },
+            {
+                "year": 2017,
+                "count": 175
+            },
+            {
+                "year": 2018,
+                "count": 187
+            },
+            {
+                "year": 2019,
+                "count": 239
+            },
+            {
+                "year": 2020,
+                "count": 150
+            },
+            {
+                "year": 2021,
+                "count": 36
+            },
+            {
+                "year": 2022,
+                "count": 29
+            },
+            {
+                "year": 2023,
+                "count": 12
+            },
+            {
+                "year": 2024,
+                "count": 13
+            }
+        ]
+    }
+]

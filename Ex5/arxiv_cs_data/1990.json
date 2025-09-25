@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Nested satisfiability",
+        "authors": [
+            "Donald E. Knuth"
+        ],
+        "summary": "A special case of the satisfiability problem, in which the clauses have a hierarchical structure, is shown to be solvable in linear time, assuming that the clauses have been represented in a convenient way.",
+        "published": "1990-01-01T00:00:00Z",
+        "link": "http://arxiv.org/abs/cs/9301111v1",
+        "categories": [
+            "cs.CC"
+        ]
+    },
+    {
+        "title": "A note on digitized angles",
+        "authors": [
+            "Donald E. Knuth"
+        ],
+        "summary": "We study the configurations of pixels that occur when two digitized straight lines meet each other.",
+        "published": "1990-04-01T00:00:00Z",
+        "link": "http://arxiv.org/abs/cs/9301112v1",
+        "categories": [
+            "cs.GR"
+        ]
+    }
+]

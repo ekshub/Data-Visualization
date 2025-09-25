@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Textbook examples of recursion",
+        "authors": [
+            "Donald E. Knuth"
+        ],
+        "summary": "We discuss properties of recursive schemas related to McCarthy's ``91 function'' and to Takeuchi's triple recursion. Several theorems are proposed as interesting candidates for machine verification, and some intriguing open questions are raised.",
+        "published": "1991-08-01T00:00:00Z",
+        "link": "http://arxiv.org/abs/cs/9301113v1",
+        "categories": [
+            "cs.CC"
+        ]
+    },
+    {
+        "title": "Context-free multilanguages",
+        "authors": [
+            "Donald E. Knuth"
+        ],
+        "summary": "This article is a sketch of ideas that were once intended to appear in the author's famous series, \"The Art of Computer Programming\". He generalizes the notion of a context-free language from a set to a multiset of words over an alphabet. The idea is to keep track of the number of ways to parse a string. For example, \"fruit flies like a banana\" can famously be parsed in two ways; analogous examples in the setting of programming languages may yet be important in the future.   The treatment is informal but essentially rigorous.",
+        "published": "1991-12-01T00:00:00Z",
+        "link": "http://arxiv.org/abs/cs/9301115v1",
+        "categories": [
+            "cs.DS"
+        ]
+    }
+]
