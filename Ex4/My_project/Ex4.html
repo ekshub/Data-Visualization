@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>你从哪里来？</title>
+  <style>
+    .curve {
+      fill: none;
+      stroke-opacity: 0.8;
+      stroke-linecap: butt;  /* 曲线的起点和终点是尖的 */
+      stroke-linejoin: round;  /* 曲线的连接点平滑 */
+    }
+    .province-label {
+      font-family: Arial, sans-serif;
+      font-size: 10px;  /* 调整字体大小 */
+      font-weight: bold;
+      fill: #333;
+    }
+    .city-label {
+      font-family: Arial, sans-serif;
+      
+      font-weight: bold;
+      fill: #333;
+    }
+    .bar {
+      stroke: none;
+    }
+    .bar:hover {
+      opacity: 0.7;
+    }
+    .title {
+  font-size: 34px;               /* 设置字体大小 */
+  font-weight: bold;             /* 字体加粗 */
+  color:black;                /* 字体颜色 */
+  text-align: center;            /* 居中对齐 */
+  margin-top: 50px;              /* 上方留白 */
+  margin-bottom: 20px;           /* 下方留白 */
+
+  letter-spacing: 1px;           /* 字符间距 */
+  font-family: 'Arial', sans-serif; /* 使用无衬线字体 */
+}
+
+  </style>
+</head>
+<body>
+  <svg id="chart" width="1500" height="1800"></svg>  <!-- 调整了height -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+  <div class="title">模型性能对比</div>
+
+  
+  <div id="chart-container" style="text-align: center;"></div>
+  <script>
+     const data1 = {
+  nodes: [
+    //1
+    // Models
+    { name: "Informer", type: "model",row: 0 , depth: 0},
+    { name: "Autoformer", type: "model",row: 1 , depth: 0},
+    { name: "FEDformer", type: "model",row: 2, depth: 0},
+    { name: "FiLM", type: "model" ,row: 3, depth: 0},
+    { name: "DLinear", type: "model" ,row: 4, depth: 0},
+    { name: "FITS", type: "model" ,row: 6, depth: 0},
+    { name: "PatchTST", type: "model" ,row: 5, depth: 0},
+//2
+    // Layers
+    { name: "Self-Attention", type: "layer",row: 0,depth: 1},
+    { name: "Feedforward", type: "layer" ,row: 2,depth: 1},
+    { name: "Embedding", type: "layer" ,row: 1,depth: 1},
+    { name: "Decomposition", type: "layer" ,row: 3,depth: 1},
+    { name: "Frequency Layer", type: "layer" ,row: 5,depth: 1},
+    { name: "Linear Layer", type: "layer" ,row: 4,depth: 1},
+  
+    { name: "Feature Modulation", type: "layer",row: 6 ,depth: 1},
+//3
+    { name: "O(L^2 * d)", type: "timeComplexity" ,row: 4,depth: 2},
+    { name: "O(L * d^2)", type: "timeComplexity",row: 3,depth: 2 },
+    { name: "O(L * d)", type: "timeComplexity" ,row: 0,depth: 2},
+    { name: "O(L * log(L))", type: "timeComplexity",row: 2,depth: 2 },
+   
+    { name: "3 * d^2", type: "formula" ,row: 7,depth: 2},  // Self-Attention
+    { name: "2 * d^2", type: "formula",row: 6,depth: 2},  // Feedforward
+    { name: "V * d", type: "formula",row: 9,depth: 2},        // Decomposition
+    { name: "d^2", type: "formula" ,row: 10,depth: 2},      // Linear Layer
+   
+    { name: "d", type: "formula" ,row: 5,depth: 2},        // Feature Modulatio
+  ],
+
+  links: [
+    // Informer
+    { source: "Informer", target: "Self-Attention", value: 1 },
+    { source: "Informer", target: "Feedforward", value: 2 },
+    { source: "Informer", target: "Embedding", value: 1 },
+
+    // Autoformer
+    { source: "Autoformer", target: "Self-Attention", value: 1 },
+    { source: "Autoformer", target: "Feedforward", value: 2 },
+    { source: "Autoformer", target: "Decomposition", value: 1 },
+
+    // FEDformer
+    { source: "FEDformer", target: "Self-Attention", value: 1 },
+    { source: "FEDformer", target: "Feedforward", value: 1 },
+    { source: "FEDformer", target: "Frequency Layer", value: 1 },
+    { source: "FEDformer", target: "Decomposition", value: 1 },
+
+    // FiLM
+    { source: "FiLM", target: "Feature Modulation", value: 2 },
+    { source: "FiLM", target: "Linear Layer", value: 2 },
+
+    // DLinear
+    { source: "DLinear", target: "Decomposition", value:2 },
+    { source: "DLinear", target: "Linear Layer", value: 2 },
+
+    // FITS
+    { source: "FITS", target: "Frequency Layer", value: 1 },
+    { source: "FITS", target: "Linear Layer", value: 2 },
+    { source: "FITS", target: "Decomposition", value: 1 },
+
+    // SparseTSF
+    { source: "PatchTST", target: "Self-Attention", value: 1 },
+    { source: "PatchTST", target: "Feature Modulation", value: 1 },
+    { source: "PatchTST", target: "Embedding", value: 1 },
+    { source: "PatchTST", target: "Linear Layer", value: 1 },
+
+  // Self-Attention
+  { source: "Self-Attention", target: "O(L^2 * d)", value: 1 },
+    { source: "Self-Attention", target: "3 * d^2" , value: 1},
+
+    // Feedforward
+    { source: "Feedforward", target: "O(L * d^2)", value: 1 },
+    { source: "Feedforward", target: "2 * d^2" , value: 1},
+
+    // Embedding
+    { source: "Embedding", target: "O(L * d)" , value: 1},
+    { source: "Embedding", target: "V * d", value: 1 },
+
+    // Decomposition
+    { source: "Decomposition", target: "O(L * d)" , value: 1},
+    { source: "Decomposition", target: "d^2", value: 1 },
+
+    // Frequency Layer
+    { source: "Frequency Layer", target: "O(L * log(L))", value: 1 },
+    { source: "Frequency Layer", target: "d" , value: 1},
+
+    // Linear Layer
+    { source: "Linear Layer", target: "O(L * d^2)", value: 1 },
+    { source: "Linear Layer", target: "d^2", value: 1},
+
+    // Convolutional Layer
+
+    // Feature Modulation
+    { source: "Feature Modulation", target: "O(L * d)", value: 1 },
+    { source: "Feature Modulation", target: "d" , value: 1},
+
+    
+  ],
+};
+
+    function createSankeyChart(data, yAxisOffset = 0) {
+  const width = 900;
+  const height = 600 + yAxisOffset;  // 根据 yAxisOffset 调整高度
+  const leftMargin = 300; // 空出的左侧空间
+  const bottomMargin = 100; // 空出的底部空间
+  const color = d3.scaleOrdinal(d3.schemeCategory10);
+  const format = d3.format(",.0f");
+
+  // 更新SVG的高度以留出100像素的空白
+  const svg = d3.create("svg")
+    .attr("width", width + leftMargin) // 扩展总宽度
+    .attr("height", height + bottomMargin) // 加上底部空间
+    .attr("viewBox", [0, 0, width + leftMargin, height + bottomMargin])
+    .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;");
+
+  const sankey = d3.sankey()
+    .nodeId(d => d.name)
+    .nodeAlign(d3.sankeyLeft)
+    .nodeWidth(15)
+    .nodePadding(10)
+    .extent([[leftMargin + 1, 5 + yAxisOffset], [width - 1, height - 5]]) // 根据偏移量设置垂直布局
+
+    .nodeSort((a, b) => {
+      if (a.column === b.column) {
+        return a.row - b.row;  // 同一列时按行排序
+      }
+      return a.column - b.column; // 按列排序
+    });
+
+  const { nodes, links } = sankey({
+    nodes: data.nodes.map(d => Object.assign({}, d)),
+    links: data.links.map(d => Object.assign({}, d))
+  });
+
+  // 绘制矩形节点
+  svg.append("g")
+    .attr("stroke", "#000")
+    .selectAll("rect")
+    .data(nodes)
+    .join("rect")
+    .attr("x", d => d.x0)
+    .attr("y", d => d.y0)
+    .attr("height", d => d.y1 - d.y0)
+    .attr("width", d => d.x1 - d.x0)
+    .attr("fill", d => color(d.name))
+    .append("title")
+    .text(d => `${d.name}\n${format(d.value)}`);
+
+  // 绘制链接路径
+  svg.append("g")
+    .attr("fill", "none")
+    .attr("stroke-opacity", 0.5)
+    .selectAll("path")
+    .data(links)
+    .join("path")
+    .attr("d", d3.sankeyLinkHorizontal())
+    .attr("stroke", d => color(d.source.name))
+    .attr("stroke-width", d => Math.max(1, d.width))
+    .append("title")
+    .text(d => `${d.source.name} → ${d.target.name}\n${format(d.value)}`);
+
+  // 绘制节点的名称
+  svg.append("g")
+    .selectAll("text")
+    .data(nodes)
+    .join("text")
+    .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+    .attr("y", d => (d.y1 + d.y0) / 2)
+    .attr("dy", "0.35em")
+    .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+    .text(d => d.name);
+
+  document.getElementById("chart-container").appendChild(svg.node());
+
+  // 计算并绘制点
+  const firstColumnNodes = nodes.filter(d => d.x0 === d3.min(nodes, d => d.x0));
+
+  const pointsArray = [];
+
+  firstColumnNodes.forEach(rect => {
+    const y0 = rect.y0;
+    const y1 = rect.y1;
+    const numPoints = 4;
+
+    for (let i = 1; i <= numPoints; i++) {
+      const y = y0 + i * (y1 - y0) / (numPoints + 1);
+      pointsArray.push({ x: rect.x0 - leftMargin, y });
+    }
+  });
+
+  svg.append("g")
+    .selectAll("circle")
+    .data(pointsArray)
+    .join("circle")
+    .attr("cx", d => d.x + 300)
+    .attr("cy", d => d.y)
+    .attr("r", 4)
+    .attr("fill", "red");
+
+  // 创建左侧数轴
+  const yScale = d3.scaleLinear()
+    .domain([1.2, 0])  // 设置数轴的范围
+    .range([yAxisOffset + 20,  height - 20]);  // 映射到SVG高度
+
+  const yAxis = d3.axisLeft(yScale)
+    .ticks(5); // 设置刻度数量
+
+  svg.append("g")
+    .attr("transform", `translate(100, 0)`)
+    .call(yAxis);
+
+  // 在数轴下方添加文本
+  svg.append("text")
+    .attr("x", leftMargin - 200)
+    .attr("y", height - 5)
+    .text("MSE")
+    .attr("font-size", "12px")
+    .attr("text-anchor", "middle")
+    .attr("fill", "#000");
+
+  const a = [0.865, 1.008, 1.107, 1.181, 0.499, 0.500, 0.521, 0.514, 0.664, 0.790, 0.891, 0.963, 0.371, 0.414, 0.422, 0.447, 0.376, 0.420, 0.459, 0.506, 0.374, 0.405, 0.429, 0.440, 0.375, 0.408, 0.429, 0.427];
+  const aPoints = a.map(value => ({ x: 100, y: yScale(value) }));
+
+  const linesData = pointsArray.map((p, i) => ({
+    x1: p.x + 300,
+    y1: p.y,
+    x2: aPoints[i].x,
+    y2: aPoints[i].y
+  }));
+
+  const colors = ["#1f77b4", "#2ca02c", "#ff7f0e", "#9467bd"];
+
+  const colorScale = d3.scaleOrdinal()
+    .domain([0, 1, 2, 3])
+    .range(colors);
+
+  svg.append("g")
+    .selectAll("line")
+    .data(linesData)
+    .join("line")
+    .attr("x1", d => d.x1)
+    .attr("y1", d => d.y1)
+    .attr("x2", d => d.x2)
+    .attr("y2", d => d.y2)
+    .attr("stroke", (d, i) => colorScale(i % 4))
+    .attr("stroke-width", 2);
+
+  // 调整图例位置，加入 yAxisOffset 影响
+  const legend = svg.append("g")
+    .attr("transform", `translate(${leftMargin - 180}, ${height - 50})`);  // 图例位置根据 yAxisOffset 调整
+
+  // 添加图例标题
+  legend.append("text")
+    .attr("x", 0)
+    .attr("y", -10)
+    .text("预测长度")
+    .attr("font-size", "12px")
+    .attr("fill", "#000")
+    .attr("text-anchor", "start");
+
+  // 定义图例数据
+  const legendData = [
+    { color: colors[0], label: "96" },
+    { color: colors[1], label: "192" },
+    { color: colors[2], label: "336" },
+    { color: colors[3], label: "720" }
+  ];
+
+  // 绘制图例的矩形和文本
+  legend.selectAll("g")
+    .data(legendData)
+    .join("g")
+    .attr("transform", (d, i) => `translate(0, ${i * 20})`) // 每行图例的间距
+    .call(g => {
+      g.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 12)
+        .attr("height", 12)
+        .attr("fill", d => d.color); // 使用图例颜色
+
+      g.append("text")
+        .attr("x", 18)
+        .attr("y", 10)
+        .text(d => d.label)
+        .attr("font-size", "10px")
+        .attr("fill", "#000")
+        .attr("text-anchor", "start"); // 左对齐
+    });
+
+  // 添加每一列最后一个矩形下方的三个文本
+  svg.append("g")
+    .selectAll("text")
+    .data(nodes)
+    .join("text")
+    .filter(d => d.y1 === d3.max(nodes.filter(node => node.x0 === d.x0), d => d.y1))
+    .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+    .attr("y", d => d.y1 + 15)
+    .attr("dy", "0.35em")
+    .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+    .each(function (d, i) {
+      const texts = ["Model", "Layer", "TimeComplexity And Formula"];
+      const offset = i + 15;
+
+      d3.select(this)
+        .append("tspan")
+        .attr("x", d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+        .attr("y", d.y1 + 15 + offset)
+        .attr("dy", "0.35em")
+        .text(texts[i]);
+    });
+}
+
+
+
+    createSankeyChart(data1,0);
+   const provinceLatitudes = [
+
+  { name: "北京", latitude: 39.904989 },
+  { name: "天津", latitude: 39.125596 },
+  { name: "河北", latitude: 38.045474 },
+  { name: "山西", latitude: 37.557014 },
+  { name: "内蒙古", latitude: 41.418311 },
+  { name: "辽宁", latitude: 42.796767 },
+  { name: "吉林", latitude: 43.86841 },
+  { name: "黑龙江", latitude: 45.756967 },
+  { name: "上海", latitude: 31.431706 },
+  { name: "江苏", latitude: 32.241544 },
+  { name: "浙江", latitude: 30.287459 },
+  { name: "安徽", latitude: 31.86119 },
+  { name: "福建", latitude: 26.075302 },
+  { name: "江西", latitude: 28.676493 },
+  { name: "山东", latitude: 36.975807 },
+  { name: "河南", latitude: 34.757975 },
+  { name: "湖北", latitude: 30.584355 },
+  { name: "湖南", latitude: 28.19409 },
+  { name: "广东", latitude: 23.125178 },
+  { name: "广西", latitude: 22.82402 },
+  { name: "海南", latitude: 20.031971 },
+  { name: "重庆", latitude: 29.333155 },
+  { name: "四川", latitude: 30.959462 },
+  { name: "贵州", latitude: 26.578343 },
+  { name: "云南", latitude: 25.040609 },
+  { name: "西藏", latitude: 29.660361 },
+  { name: "陕西", latitude: 34.263161 },
+  { name: "甘肃", latitude: 36.058039 },
+  { name: "青海", latitude: 36.623178 },
+  { name: "宁夏", latitude: 38.46637 },
+  { name: "新疆", latitude: 44.492818 },
+  { name: "台湾", latitude: 24.744332 },
+  { name: "香港", latitude: 22.320048 },
+  { name: "澳门", latitude: 21.998951 },
+  { name: "海外", latitude: 19 }
+];
+
+// 按纬度从高到低排序
+const sortedProvinces = provinceLatitudes.sort((a, b) => b.latitude - a.latitude);
+const provinceLatitudesCount = [0,2, 10, 24, 9, 13, 20, 9, 6,4,3,0];
+
+// 获取最大纬度和最小纬度
+const maxLatitude = sortedProvinces[0].latitude;
+const minLatitude = sortedProvinces[sortedProvinces.length - 1].latitude;
+
+// 设置横坐标轴总长
+const axisLength = 700; // 你可以根据需要调整总长度
+
+// 生成横坐标映射
+const latitudeToX = sortedProvinces.reduce((acc, province) => {
+  // 1. 计算归一化值: 将纬度映射到 [0, 1] 范围
+  const normalizedLatitude = (province.latitude - minLatitude) / (maxLatitude - minLatitude);
+
+  // 2. 应用 sin 加权：sin(latitude) 会把纬度转换为地理面积的加权值
+  const latitudeInRadians = (province.latitude * Math.PI) / 180;  // 转换为弧度
+  const weightedLatitude = Math.sin(latitudeInRadians); // 使用 sin 函数
+
+  // 3. 计算横坐标 (加权后的线性映射)
+  const x =10+ axisLength + 100 - axisLength * (weightedLatitude-Math.sin((20 * Math.PI) / 180))/(Math.sin(( 45.756967 * Math.PI) / 180)-Math.sin((20 * Math.PI) / 180));
+  
+  acc[province.name] = x;
+  return acc;
+}, {});
+
+console.log(latitudeToX);
+
+    const data = provinceLatitudes.sort((a, b) => b.latitude - a.latitude).map(d => d.name);
+
+    const provinceCounts = {
+  "黑龙江": 1, "内蒙古": 5, "吉林": 1, "辽宁": 4, "北京": 1, "河北": 7, "天津": 15, "山西": 2,
+  "山东": 6, "河南": 8, "陕西": 0, "四川": 5, "江苏": 0, "安徽": 3, "江西": 4, "浙江": 0,
+  "湖北": 5, "湖南": 2, "广东": 3, "广西": 0, "重庆": 3, "云南": 1, "贵州": 1, "甘肃": 0,
+  "福建": 4, "海南": 0, "西藏": 0, "宁夏": 0, "新疆": 0, "青海": 0, "澳门": 0, "香港": 0,
+  "台湾": 0, "海外": 3,"上海":0
+};
+const provinceCounts2 = {
+  "黑龙江": 3, "内蒙古": 4, "吉林": 2, "辽宁": 1, "北京": 0, "河北": 0, "天津": 0, "山西": 1,
+  "山东": 1, "河南": 1, "陕西": 2, "四川": 4, "江苏": 2, "安徽": 1, "江西": 3, "浙江": 2,
+  "湖北": 2, "湖南": 3, "广东": 4, "广西": 4, "重庆": 4, "云南": 4, "贵州": 4, "甘肃": 4,
+  "福建": 3, "海南": 5, "西藏": 5, "宁夏": 4, "新疆": 5, "青海": 5, "澳门": 5, "香港": 5,
+  "台湾": 5, "海外": 5,"上海":2
+};//0：0-2h;1:2-4h;2:4-7h;3:7-10h;4:10-14h;5:24h+
+    // 创建一个长度与省份数量相等的数组，前半部分值从 7 到 0，后半部分从 0 到 -30
+    const provinceValues = [];
+    const midPoint = Math.floor(data.length / 2);
+    for (let i = 0; i < data.length; i++) {
+      if (i < midPoint) {
+        provinceValues.push((-7 + i)*0.5);  // 前半部分值递减
+      } else {
+        provinceValues.push(-(i-7));  // 后半部分值递减
+      }
+    }
+
+    // 创建一个省份名称到数组值的映射
+    const provinceValueMap = data.reduce((acc, province, index) => {
+      acc[province] = provinceValues[index];
+      return acc;
+    }, {});
+
+    const width = 1500;
+    const height = 1000;  // 调整图表高度
+    const margin = { top: 40, right: 150, bottom: 40, left: 150 };  // 调整上下边距
+    const svg = d3.select("#chart").attr("width", width).attr("height", height);
+
+    const leftX = margin.left+250;
+    const rightX = width - margin.right;
+    const yScale = d3.scalePoint()
+      .domain(data)
+      .range([margin.top, height - margin.bottom])  // 调整yScale的范围
+      .padding(0.1);  // 缩小padding值，减少间隔
+
+    // 添加省份标签
+   
+
+    // 添加天津标签和圆点
+
+    // 定义曲线生成器
+    const lineGenerator = d3.line()
+      .curve(d3.curveCatmullRom.alpha(0.5))  // alpha值决定平滑度，0.5为中等平滑
+      .x(d => d[0])
+      .y(d => d[1]);
+
+    // 为每条曲线编写精确控制路径代码
+    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);  // 使用Ordinal Scale为每个条形分配不同的颜色
+    const colorList = ["#ff7f50",  // 珊瑚橙
+  "#ffcc66",  // 浅金色
+  "#99cc99",  // 薄荷绿
+  "#66ccff",  // 淡蓝色
+  "#cc99ff",  // 淡紫色
+  "#ff66b2" ]  // 鲜粉色];
+   // 画竖线的函数
+   function drawVerticalLine(svg, x, y, lineHeight) {
+  svg.append("line")
+    .attr("x1", x )  // 使用预定义的 leftX，竖线的 x 坐标（开始位置）
+    .attr("x2", x )  // 使用预定义的 leftX，竖线的 x 坐标（结束位置）
+    .attr("y1", y)  // 竖线的 y 坐标（开始位置）
+    .attr("y2", y + lineHeight)  // 竖线的 y 坐标（结束位置）
+    .attr("stroke", "black")  // 线的颜色
+    .attr("stroke-width", 2);  // 线的宽度
+    drawHorizontalLine(svg, x - 5, y, 10);  // 在竖线起始点上方绘制一条横线
+  // 绘制竖线的下横线
+  drawHorizontalLine(svg, x -5, y + lineHeight, 10);  // 在竖线结束点下方绘制一条横线
+}
+function drawHorizontalLine(svg, x, y, lineWidth) {
+  svg.append("line")
+    .attr("x1", x)  // 横线的 x 坐标（开始位置）
+    .attr("x2", x + lineWidth)  // 横线的 x 坐标（结束位置）
+    .attr("y1", y)  // 横线的 y 坐标（开始位置）
+    .attr("y2", y)  // 横线的 y 坐标（结束位置）
+    .attr("stroke", "black")  // 线的颜色
+    .attr("stroke-width", 2);  // 线的宽度
+}
+// 假设我们有一个 SVG 元素，宽度为 500，高度为 500
+const svg1 = d3.select("svg");
+
+// 画一条竖线，在 (leftX + 200, 100) 位置，长度为 750px
+
+
+    data.forEach((province, index) => {
+  const count = provinceCounts[province] || 1;
+
+  // 计算条形图的宽度和曲线的起始点
+  const barWidth = provinceCounts[province] * 12;  // 每个人数12px，变细
+  const barY = latitudeToX[province] - 7.5 ;  // 条形图的垂直位置
+
+  const lineData = [];  // 存储折线图的所有顶点
+lineData.push({ 
+  x: leftX - 50, 
+  y: 100, 
+  label: ""  // 起点 label
+}); 
+
+for (let i = 1; i < 10; i++) {
+    const barWidth2 = -provinceLatitudesCount[i] * 8 - 50;
+    const domain = [20, 45.756967];  // 纬度的范围
+    const range = [100, 850]; // 映射的Y坐标范围
+    
+    const barTop = {
+        x: leftX + barWidth2, 
+        y: range[1]  - (range[1] - range[0]) * 
+            (Math.sin(((44.5 - 2.5 * (i - 1)) * Math.PI) / 180) - Math.sin((domain[0] * Math.PI) / 180)) / 
+            (Math.sin((domain[1] * Math.PI) / 180) - Math.sin((domain[0] * Math.PI) / 180))
+    };
+
+    // 添加每个点的 label
+    if (i === 9) {
+        lineData.push({
+            x: barTop.x, 
+            y: barTop.y, 
+            label: `25°N以下 ${provinceLatitudesCount[i]}人`
+        });
+    } else {
+        lineData.push({
+            x: barTop.x, 
+            y: barTop.y, 
+            label: `${(47.5 - 2.5 * i).toFixed(1)}°N~${(45 - 2.5 * i).toFixed(1)}°N ${provinceLatitudesCount[i]}人`
+        });
+    }
+}
+
+// 追加结束坐标点
+lineData.push({ x: leftX - 74, y: 825, label: `海外 ${provinceLatitudesCount[10]}人` });
+lineData.push({ x: leftX - 50, y: 850, label: '' }); 
+
+// 绘制文本，前六个红色，后六个蓝色
+svg.selectAll("text")  
+  .data(lineData)
+  .enter()
+  .append("text")
+  .attr("x", d => d.x - 15)  // 调整位置，确保不会与圆点重叠
+  .attr("y", d => d.y)       
+  .attr("dy", ".35em")       // 垂直居中对齐
+  .attr("text-anchor", "end")
+  .text(d => d.label)         // 设置文本内容
+  .attr("font-family", "Microsoft YaHei, Arial, sans-serif")
+  .attr("font-size", "12px")
+  .attr("fill", (d, i) => i < 6 ? "#FF6F61" : "#3399cc")  // 前六个使用红色，其余使用蓝色
+  .style("fill-opacity", 1);  // 设置填充颜色的透明度
+
+  
+  // 获取 provinceCounts2 中对应的颜色索引
+  let colorIndex;
+  colorIndex = provinceCounts2[province];
+  
+
+  // 创建颜色比例尺
+  const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+  
+  
+  // 使用选定的颜色来填充条形图
+  svg.append("rect")
+    .attr("x", leftX-barWidth+190)  // 横向条形图的X位置
+    .attr("y", barY)  // 条形图的Y位置
+    .attr("width", barWidth)  // 条形图的宽度
+    .attr("height", 15)  // 固定高度为15
+    .attr("rx", 10)  // 圆角的水平半径
+    .attr("ry", 10)  // 圆角的垂直半径
+    .attr("class", "bar")
+    .style("fill", colorList[colorIndex]);  // 使用颜色比例尺，保证每个条形图不同颜色
+
+  // 曲线起点
+  const curveStart = leftX + 190;
+  
+  const curveEndY = yScale("天津");
+
+  // 为每条曲线创建一组曲线，曲线从相同的起点开始
+  const numLines = provinceCounts[province] * 4;  // 每个省份的曲线数与生源数量一致
+  const offset = 0.75;  // 每条曲线之间的间距
+
+  for (let i = 0; i < numLines; i++) {
+    // 计算每条曲线的偏移量
+    const yOffset = (i - numLines / 2) * offset;  // 从中心逐渐偏移
+
+    // 使用 provinceValueMap 来获得每个省份的对应值
+    const provinceValue = provinceValueMap[province];  // 获取对应省份的值
+
+    const points = [
+      [curveStart, latitudeToX[province]],  // 曲线起点
+      [curveStart + 20, latitudeToX[province] + provinceValue/10  + yOffset/5],  // 曲线的第二个点，使用对应省份的值
+      [curveStart + 100, latitudeToX[province] +provinceValue+ yOffset/1.5],  // 控制点
+      [rightX- 200, latitudeToX[province]+(latitudeToX['天津']-latitudeToX[province])*(rightX- 350-curveStart)/(rightX- 300-curveStart)+ yOffset/1.5 ],
+      [rightX- 100, latitudeToX[province]+(latitudeToX['天津']-latitudeToX[province])*(rightX- 210-curveStart)/(rightX- 200-curveStart)+yOffset/3 ],
+      [rightX, latitudeToX['天津']]  // 天津位置
+    ];
+
+    // 绘制每条曲线
+    svg.append("path")
+      .attr("class", "curve")
+      .attr("d", lineGenerator(points))  // 生成路径
+      .attr("stroke-width", 1)  // 每条细线的宽度
+      .attr("stroke", colorList[colorIndex]);  // 每条曲线使用不同的颜色
+  }
+  svg.append("text")
+      .attr("class", "city-label")
+      .attr("x", rightX + 30)
+      .attr("y", latitudeToX["天津"])
+      .attr("font-weight", "bold")  // 加粗字体，强调标题
+      .attr("font-family", "Microsoft YaHei, Arial, sans-serif")  // 中文字体优先
+      .attr("font-size", "20px")  // 稍大字体，更显眼
+      .attr("fill", "#2C3E50")  // 使用深蓝灰色，提升视觉质感
+      .attr("text-anchor", "middle")  // 水平居中
+      .style("letter-spacing", "1px")  // 增加字间距，提升高级感
+      .style("text-transform", "none")  // 保持原文字形态
+      .style("text-shadow", "none")  // 移除阴影效果
+      .text("天津");
+      
+
+    svg.append("circle")
+      .attr("cx", rightX)
+      .attr("cy", latitudeToX["天津"])
+      .attr("r", 5)
+      .attr("fill", "blue");
+
+  // 添加折线图路径
+// 创建图例
+const legendX = width - 300;  // 将图例放置在右侧
+const legendY = 520;  // 图例的起始纵向位置
+const legendSpacing = 30;  // 每个图例项之间的间距
+
+// 定义每个颜色区间的标签
+const legendLabels = ["2h以下", "2-4h", "4-7h", "7-10h", "10-14h", "24h以上"];
+
+// 图例标题
+const legendTitle = "往返时间";
+
+// 创建图例容器
+const legend = svg.append("g")
+  .attr("class", "legend")
+  .attr("transform", `translate(${legendX}, ${legendY})`);
+
+// 绘制图例标题，向右偏移
+legend.append("text")
+  .attr("x", 50)  // 标题的 x 坐标，确保与图例矩形对齐
+  .attr("y", -legendSpacing - 10)  // 标题的 y 坐标，向上偏移，留出更大间距
+  .attr("font-weight", "bold")  // 加粗字体，强调标题
+  .attr("font-family", "Microsoft YaHei, Arial, sans-serif")  // 中文字体优先
+  .attr("font-size", "18px")  // 稍大字体，更显眼
+  .attr("fill", "#2C3E50")  // 使用深蓝灰色，提升视觉质感
+  .attr("text-anchor", "middle")  // 水平居中
+  .style("letter-spacing", "1px")  // 增加字间距，提升高级感
+  .style("text-transform", "none")  // 保持原文字形态
+  .style("text-shadow", "none")  // 移除阴影效果
+  
+  .text(legendTitle);
+  svg.append("text")
+  .attr("x", rightX/2+150)  // 标题的 x 坐标，确保与图例矩形对齐
+  .attr("y", 50)  // 标题的 y 坐标，向上偏移，留出更大间距
+  .attr("font-weight", "bold")  // 加粗字体，强调标题
+  .attr("font-family", "Microsoft YaHei, Arial, sans-serif")  // 中文字体优先
+  .attr("font-size", "40px")  // 稍大字体，更显眼
+  .attr("fill", "#2C3E50")  // 使用深蓝灰色，提升视觉质感
+  .attr("text-anchor", "middle")  // 水平居中
+  .style("letter-spacing", "1px")  // 增加字间距，提升高级感
+  .style("text-transform", "none")  // 保持原文字形态
+  .style("text-shadow", "none")  // 移除阴影效果
+  
+  .text("你从哪里来？");
+
+
+
+// 绘制颜色矩形
+legend.selectAll("rect")
+  .data(colorList)
+  .enter()
+  .append("rect")
+  .attr("x", 0)  // 所有矩形的 x 坐标设置为 0
+  .attr("y", (d, i) => i * legendSpacing)  // 矩形的 y 坐标根据图例项的索引垂直排列
+  .attr("width", 20)
+  .attr("height", 20)
+  .style("fill", d => d);
+
+// 绘制图例文本
+legend.selectAll("text.legend-item")
+  .data(legendLabels)
+  .enter()
+  .append("text")
+  .attr("class", "legend-item")
+  .attr("font-family", "Microsoft YaHei, Arial, sans-serif")  // 中文字体优先
+  .attr("font-size", "14px")  // 简约的字体大小
+  .attr("font-weight", "normal")  // 不加粗，保持简约
+  .attr("fill", "#333333")  // 使用深灰色，简洁且易读
+  .attr("x", 30)  // 调整文本位置
+  .attr("y", (d, i) => i * legendSpacing + 18)  // 文本 y 坐标，均匀排列
+  .attr("dy", ".35em")  // 垂直居中
+  .style("letter-spacing", "0.5px")  // 增加轻微间距，适合中文
+  .style("transition", "fill 0.2s ease")  // 添加平滑过渡效果
+  .text(d => d)
+  .on("mouseover", function(event, d) {
+    d3.select(this)
+      .style("fill", "#0056b3");  // 鼠标悬浮时变为深蓝
+  })
+  .on("mouseout", function(event, d) {
+    d3.select(this)
+      .style("fill", "#333333");  // 鼠标移开恢复原色
+  });
+
+
+
+  
+
+// 使用 D3.js 绘制所有的点
+// 绘制所有的点
+
+
+
+// 绘制省份标签文本
+svg.selectAll(".province-label")
+  .data(data)
+  .enter()
+  .append("text")
+  .attr("class", "province-label")
+  .attr("x", leftX - 12)  // 调整位置，让文字更靠近条形图
+  .attr("y", (d) => latitudeToX[d] + 2.5)
+  .attr("text-anchor", "end")
+  .text(d => d)
+  .attr("font-family", "Microsoft YaHei, Arial, sans-serif")
+  .attr("font-size", "12px")
+  .attr("fill", '#003366')   // 设置为另一种颜色
+  .style("fill-opacity", 1)
+  .style("pointer-events", "none");
+
+  // 调试输出：检查文本的 x 和 y 坐标是否正确
+
+
+  
+
+
+    const points2=[]
+    points2.push([[leftX-50, latitudeToX['黑龙江']],
+                    [lineData[1].x+(leftX-50-lineData[1].x)*0.7, latitudeToX['黑龙江']],
+                    [lineData[1].x,lineData[1].y] ])
+    points2.push([[leftX-50, latitudeToX['吉林']],
+                    [lineData[1].x+(leftX-50-lineData[1].x)*0.7, latitudeToX['吉林']],
+                    [lineData[1].x,lineData[1].y] ])
+    points2.push([[leftX-50, latitudeToX['新疆']],
+                    [lineData[1].x+(leftX-50-lineData[1].x)*0.7, latitudeToX['新疆']],
+                    [lineData[1].x,lineData[1].y] ])
+   points2.push([[leftX-50, latitudeToX['辽宁']],
+                    [lineData[2].x+(leftX-50-lineData[2].x)*0.7, latitudeToX['辽宁']],
+                    [lineData[2].x,lineData[2].y] ])
+    points2.push([[leftX-50, latitudeToX['内蒙古']],
+                    [lineData[2].x+(leftX-50-lineData[2].x)*0.7, latitudeToX['内蒙古']],
+                    [lineData[2].x,lineData[2].y] ]) 
+    points2.push([[leftX-50, latitudeToX['北京']],
+                    [lineData[3].x+(leftX-50-lineData[3].x)*0.7, latitudeToX['北京']],
+                    [lineData[3].x,lineData[3].y] ])
+    points2.push([[leftX-50, latitudeToX['天津']],
+                    [lineData[3].x+(leftX-50-lineData[3].x)*0.7, latitudeToX['天津']],
+                    [lineData[3].x,lineData[3].y] ])
+
+   points2.push([[leftX-50, latitudeToX['宁夏']],
+                    [lineData[3].x+(leftX-50-lineData[3].x)*0.7, latitudeToX['宁夏']],
+                    [lineData[3].x,lineData[3].y] ])
+    points2.push([[leftX-50, latitudeToX['河北']],
+                    [lineData[3].x+(leftX-50-lineData[3].x)*0.7, latitudeToX['河北']],
+                    [lineData[3].x,lineData[3].y] ]) 
+                    points2.push([[leftX-50, latitudeToX['山西']],
+                    [lineData[3].x+(leftX-50-lineData[3].x)*0.7, latitudeToX['山西']],
+                    [lineData[3].x,lineData[3].y] ])
+    points2.push([[leftX-50, latitudeToX['山东']],
+                    [lineData[4].x+(leftX-50-lineData[4].x)*0.7, latitudeToX['山东']],
+                    [lineData[4].x,lineData[4].y] ])
+
+   points2.push([[leftX-50, latitudeToX['青海']],
+                    [lineData[4].x+(leftX-50-lineData[4].x)*0.7, latitudeToX['青海']],
+                    [lineData[4].x,lineData[4].y] ])
+    points2.push([[leftX-50, latitudeToX['甘肃']],
+                    [lineData[4].x+(leftX-50-lineData[4].x)*0.7, latitudeToX['甘肃']],
+                    [lineData[4].x,lineData[4].y] ]) 
+    points2.push([[leftX-50, latitudeToX['河南']],
+                    [lineData[5].x+(leftX-50-lineData[5].x)*0.7, latitudeToX['河南']],
+                    [lineData[5].x,lineData[5].y] ])
+    points2.push([[leftX-50, latitudeToX['陕西']],
+                    [lineData[5].x+(leftX-50-lineData[5].x)*0.7, latitudeToX['陕西']],
+                    [lineData[5].x,lineData[5].y] ])
+
+   points2.push([[leftX-50, latitudeToX['江苏']],
+                    [lineData[6].x+(leftX-50-lineData[6].x)*0.7, latitudeToX['苏徽']],
+                    [lineData[6].x,lineData[6].y] ])
+    points2.push([[leftX-50, latitudeToX['安徽']],
+                    [lineData[6].x+(leftX-50-lineData[6].x)*0.7, latitudeToX['安徽']],
+                    [lineData[6].x,lineData[6].y] ]) 
+    points2.push([[leftX-50, latitudeToX['江苏']],
+                    [lineData[6].x+(leftX-50-lineData[6].x)*0.7, latitudeToX['江苏']],
+                    [lineData[6].x,lineData[6].y] ]) 
+                    points2.push([[leftX-50, latitudeToX['上海']],
+                    [lineData[6].x+(leftX-50-lineData[6].x)*0.7, latitudeToX['上海']],
+                    [lineData[6].x,lineData[6].y] ])
+    points2.push([[leftX-50, latitudeToX['湖北']],
+                    [lineData[6].x+(leftX-50-lineData[6].x)*0.7, latitudeToX['湖北']],
+                    [lineData[6].x,lineData[6].y] ])
+
+   points2.push([[leftX-50, latitudeToX['四川']],
+                    [lineData[6].x+(leftX-50-lineData[6].x)*0.7, latitudeToX['四川']],
+                    [lineData[6].x,lineData[6].y] ])
+    points2.push([[leftX-50, latitudeToX['浙江']],
+                    [lineData[6].x+(leftX-50-lineData[6].x)*0.7, latitudeToX['浙江']],
+                    [lineData[6].x,lineData[6].y] ]) 
+    points2.push([[leftX-50, latitudeToX['西藏']],
+                    [lineData[7].x+(leftX-50-lineData[7].x)*0.7, latitudeToX['西藏']],
+                    [lineData[7].x,lineData[7].y] ])
+    points2.push([[leftX-50, latitudeToX['重庆']],
+                    [lineData[7].x+(leftX-50-lineData[7].x)*0.7, latitudeToX['重庆']],
+                    [lineData[7].x,lineData[7].y] ])
+
+   points2.push([[leftX-50, latitudeToX['湖南']],
+                    [lineData[7].x+(leftX-50-lineData[7].x)*0.7, latitudeToX['湖南']],
+                    [lineData[7].x,lineData[7].y] ])
+    points2.push([[leftX-50, latitudeToX['江西']],
+                    [lineData[7].x+(leftX-50-lineData[7].x)*0.7, latitudeToX['江西']],
+                    [lineData[7].x,lineData[7].y] ]) 
+                    points2.push([[leftX-50, latitudeToX['贵州']],
+                    [lineData[8].x+(leftX-50-lineData[8].x)*0.7, latitudeToX['贵州']],
+                    [lineData[8].x,lineData[8].y] ])
+    points2.push([[leftX-50, latitudeToX['福建']],
+                    [lineData[8].x+(leftX-50-lineData[8].x)*0.7, latitudeToX['福建']],
+                    [lineData[8].x,lineData[8].y] ])
+
+   points2.push([[leftX-50, latitudeToX['台湾']],
+                    [lineData[9].x+(leftX-50-lineData[9].x)*0.7, latitudeToX['台湾']],
+                    [lineData[9].x,lineData[9].y] ])
+    points2.push([[leftX-50, latitudeToX['云南']],
+                    [lineData[8].x+(leftX-50-lineData[8].x)*0.7, latitudeToX['云南']],
+                    [lineData[8].x,lineData[8].y] ]) 
+    points2.push([[leftX-50, latitudeToX['广东']],
+                    [lineData[9].x+(leftX-50-lineData[9].x)*0.7, latitudeToX['广东']],
+                    [lineData[9].x,lineData[9].y] ])
+    points2.push([[leftX-50, latitudeToX['广西']],
+                    [lineData[9].x+(leftX-50-lineData[9].x)*0.7, latitudeToX['广西']],
+                    [lineData[9].x,lineData[9].y] ])
+
+   points2.push([[leftX-50, latitudeToX['海南']],
+                    [lineData[9].x+(leftX-50-lineData[9].x)*0.7, latitudeToX['海南']],
+                    [lineData[9].x,lineData[9].y] ])
+    points2.push([[leftX-50, latitudeToX['海外']],
+                    [lineData[10].x+(leftX-50-lineData[10].x)*0.7, latitudeToX['海外']],
+                    [lineData[10].x,lineData[10].y] ]) 
+
+// 在SVG中绘制折线
+// 创建渐变色（让蓝色更早出现，逐渐过渡）
+const gradient = svg.append("defs")
+    .append("linearGradient")
+    .attr("id", "gradient-red-blue")  // 渐变的ID
+    .attr("x1", "0%")  // 渐变开始位置
+    .attr("y1", "0%")  // 渐变开始位置
+    .attr("x2", "0%")  // 渐变结束位置
+    .attr("y2", "100%");  // 渐变方向从上到下
+
+// 定义渐变色从浅红色到浅蓝色，并设置透明度
+gradient.append("stop")
+    .attr("offset", "0%")
+    .attr("stop-color", "#FF6F61")  // 浅红色
+    .attr("stop-opacity", 0.7);  // 设置透明度，确保颜色较为柔和
+
+gradient.append("stop")
+    .attr("offset", "20%")  // 蓝色开始的更早位置
+    .attr("stop-color", "#FFB3B3")  // 更浅的红色
+    .attr("stop-opacity", 0.4);  // 透明度降低，过渡更自然
+
+gradient.append("stop")
+    .attr("offset", "100%")
+    .attr("stop-color", "#87CEFA")  // 浅蓝色
+    .attr("stop-opacity", 0.6);  // 浅蓝色透明度适中，让渐变更自然
+
+// 使用平滑曲线生成器（重新命名为 smoothLineGenerator）
+const smoothLineGenerator = d3.line()
+    .x(d => d.x)  // 设置 x 坐标
+    .y(d => d.y)  // 设置 y 坐标
+    .curve(d3.curveCardinal);  // 使用平滑曲线生成器
+
+// 创建路径数据（确保 lineData 包含 x, y 坐标）
+const pathData = smoothLineGenerator(lineData);  // 使用平滑曲线生成路径字符串
+
+// 绘制曲线的渐变区域（填充）
+svg.append("path")
+    .attr("d", pathData)  // 使用生成的路径数据
+    .attr("fill", "url(#gradient-red-blue)")  // 使用渐变填充
+    .attr("stroke", "none");  // 没有边框，只有填充
+
+// 绘制曲线的边界（固定边界颜色）
+svg.append("path")
+    .attr("d", pathData)  // 使用相同的路径数据
+    .attr("fill", "none")  // 不填充区域
+    .attr("stroke", "#FF6F61")  // 使用红色边框
+    .attr("stroke-width", 2)  // 边框宽度
+    .attr("stroke-linejoin", "round")  // 连接方式
+    .attr("stroke-linecap", "round");  // 端点方式
+
+// 逐段绘制每两个点之间的渐变（每段的渐变色变化）
+lineData.forEach((d, i) => {
+    if (i < lineData.length - 1) {  // 确保不超出数组范围
+        const segment = [lineData[i], lineData[i + 1]];  // 取出两个相邻点的数据
+
+        // 创建渐变色（每段使用独立的渐变）
+        const segmentGradient = svg.append("defs")
+            .append("linearGradient")
+            .attr("id", `gradient-segment-${i}`)
+            .attr("x1", "0%")  // 渐变开始位置
+            .attr("y1", "0%")  // 渐变开始位置
+            .attr("x2", "0%")  // 渐变结束位置
+            .attr("y2", "100%");  // 渐变从上到下
+
+        // 定义渐变色从浅红色到浅蓝色，并设置透明度
+        segmentGradient.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "#FF6F61")  // 浅红色
+            .attr("stop-opacity", 0.7);  // 高透明度，颜色更加鲜明
+
+        segmentGradient.append("stop")
+            .attr("offset", "20%")  // 蓝色开始的更早位置
+            .attr("stop-color", "#FFB3B3")  // 更浅的红色
+            .attr("stop-opacity", 0.4);  // 透明度降低
+
+        segmentGradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#87CEFA")  // 浅蓝色
+            .attr("stop-opacity", 0.6);  // 浅蓝色透明度适中
+
+        // 绘制曲线段并应用渐变色
+        svg.append("path")
+            .attr("d", smoothLineGenerator(segment))  // 使用平滑的曲线生成器生成每段路径
+            .attr("fill", "url(#gradient-segment-" + i + ")")  // 使用每段独立的渐变色
+            .attr("stroke", "none");  // 不显示边界
+    }
+});
+
+
+for (let i = 0; i < 34; i++) {
+  svg.append("path")
+      .attr("class", "curve")
+      .attr("d", lineGenerator(points2[i]))  // 生成路径
+      .attr("stroke-width", 1)  // 每条细线的宽度
+      .attr("stroke", '#003366');}  // 每条曲线使用不同的颜色
+// 可选：如果你希望在路径上增加动画效果，可以使用 transition 方法
+svg.select("path")
+    .transition()
+    .duration(2000)
+    .attr("stroke-dasharray", function() {
+        const length = this.getTotalLength();  // 获取路径总长度
+        return `${length} ${length}`;  // 设置虚线
+    })
+    .attr("stroke-dashoffset", function() {
+        return this.getTotalLength();  // 初始偏移量
+    })
+    .transition()
+    .duration(2000)
+    .attr("stroke-dashoffset", 0);  // 使路径显示完成
+
+    const svg2 = d3.select("svg");
+    svg.selectAll("circle")
+  .data(lineData)
+  .enter()
+  .append("circle")
+  .attr("cx", d => d.x) 
+  .attr("cy", d => d.y)  
+  .attr("r", 3)          
+  .style("fill", '#003366');
+// 画一条竖线，在 (leftX - 50, 100) 位置，长度为 750px
+drawVerticalLine(svg2, leftX - 50, 100, 750);
+drawVerticalLine(svg1, leftX + 190, 100, 750);
+
+
+
+
+
+
+    });
+    
+
+
+    
+
+    
+
+  </script>
+  
+</body>
+</html>
